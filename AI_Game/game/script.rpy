@@ -43,9 +43,9 @@ label start:
 label exposition:
     "This is [company_name]."
 
-    # show company backdrop
+    scene fintek with fade
 
-    "[company_name] was once a thriving company, but it has been on a downward trajectory since 2015."
+    "[company_name] was once a thriving company, but it's been on a downward trajectory since 2015."
 
     "After a bad investment in {color=#f00}CorgiCoin{/color}, customers started losing trust and sales have been declining year-over-year."
 
@@ -57,13 +57,13 @@ label exposition:
 
     "You are a tech consultant from {color=#f00}TechRight{/color} hired to overhaul the company’s competitive strategy."
 
-    "You’re relatively new, but you think you have what it takes to turn this company around and win back customers."
+    "You’re relatively new, but you think you have what it takes to turn this company around."
 
     "That’s what it says on your business card anyway."
 
     # flash business card
 
-    "{color=#f00}{i}NOTE: If you run out of money (or run low on money), the company will go bankrupt. Make decisions carefully!{/color}{/i}"
+    "{color=#f00}{i}NOTE: Conserve your money! If you run low on money by the end of the simulation, the company will go out of business. Make decisions carefully!{/color}{/i}"
 
     jump scenario1
 
@@ -80,7 +80,7 @@ label scenario1:
 
     show boss neutral at bobble
 
-    boss "Apparently it can speed up workflow and help the company save costs—it sounds like exactly what we need right now!"
+    boss "Apparently it can speed up workflow and help the company save costs. It sounds like exactly what we need right now!"
 
     show boss neutral at bobble
 
@@ -96,14 +96,14 @@ label scenario1:
 
     show boss neutral at bobble
 
-    boss "It’s an AI resumé-screening program. It scans resumé and cover letters for specific requirements and keywords, and returns a score for each candidate."
+    boss "It’s an AI resumé-screening program. It scans resumé and cover letters for requirements and keywords, and returns a score for each candidate."
 
     show boss neutral at bobble
 
-    boss "You’re a tech consultant, what do you think? We need your guidance on how we can most effectively implement this tool."
+    boss "You’re a tech consultant, what do you think? We need your guidance on how to best implement this tool."
 
     menu:
-        mc "My first decision. Do I:"
+        mc "How should the company implement its AI hiring tool?"
 
         "Encourage immediate company-wide deployment of the AI software (+$100)":
             $ process_score += 20
@@ -139,17 +139,17 @@ label scenario2:
 
     "{i}You’re sitting at your desk when a man walks up to you. They flash a smile and wave.{/i}"
 
-    # karim comes in
+    show karim neutral at center with moveinright 
 
     hr "Hey! I’m Karim from HR."
 
     hr "I’ve been working at [company_name] since 2015. I've heard some good things about you from the boss. Thanks for helping out."
 
-    # karim thinking 
+    show karim talking
 
     hr "So why was I here again? … Oh yeah!"
 
-    # karim explaining 
+    show karim talking
 
     hr "We were thinking of extending the use of AI in our hiring processes."
 
@@ -173,16 +173,16 @@ label scenario2:
             mc "Plus, candidates can record responses in their own time."
             hr "Right? HR loves the flexibility. But not everyone is a fan."
     
-    hr "Anyways, we've been offered a software package that does this by a high-level vendor."
+    hr "Anyways, we've been offered a software package by a high-level vendor that does just this."
 
-    hr "They're giving us a steep discount, and executives are drooling over all the promised benefits."
+    hr "They're giving us a steep discount, and executives are drooling over the promised benefits."
 
     hr "But I wanted to consult with you before we moved forward with the decision."
 
     hr "So, any advice? What should we tell the vendor?"
 
     menu:
-        "My second decision. Should I:"
+        hr "What should we tell the vendor?"
 
         "Go for it — let's roll it out (+$80)":
             $ process_score += 20
@@ -192,6 +192,7 @@ label scenario2:
             $ company_money += 80
 
             "{i}This system seems promising and it hasn’t caused issues so far. This could save the company serious time and money.{/i}"
+            hide karim with moveoutleft
             jump scenario3
         "Request that the vendor submit fairness audits and pass bias-testing standards (-$100)":
             $ process_score -= 10
@@ -199,6 +200,7 @@ label scenario2:
             $ company_money -= 100
 
             "{i}They might not do it, and this might take a while. But this would help maintain fairness and trust within candidates.{/i}"
+            hide karim with moveoutleft
             jump scenario3
         "Propose launching a controlled pilot in one department (-$20)":
             $ process_score += 10
@@ -206,6 +208,7 @@ label scenario2:
             $ company_money -= 20
 
             "{i}Collect data, monitor feedback from candidates, before deciding if it’s worth scaling up. Slower for sure—but safer, and more methodical.{/i}"
+            hide karim with moveoutleft
             jump scenario3
 
 label scenario3:   
@@ -220,13 +223,13 @@ label scenario3:
 
     boss "It can track tone, facial expressions, gestures—even the candidate’s background!"
 
-    boss "Supposedly it uses data to predict which candidates would perform best when hired."
+    boss "It uses this data to predict which candidates would perform best if hired."
 
-    mc "Definitely sounds cutting edge. I've heard of it in concept, but I didn't know they were rolling it out so soon."
+    mc "Definitely sounds cutting edge. I've heard about it as a concept, but I didn't know they were rolling it out so soon."
 
     boss "And guess what? I checked in with our vendor, and surprise, surprise—it’s available as an add-on to our software package!"
 
-    boss "I’m thinking we roll it out immediately. You know — weed out the underperformers before we bring them onto our team."
+    boss "I’m thinking we roll it out immediately. You know—weed out the underperformers before we bring them onto our team."
 
     mc "Hm..."
 
@@ -282,7 +285,7 @@ label scenario4:
 
     boss "And well, we’ve got a problem. Take a look at this article:"
 
-    "The boss plops a printed news article on your desk. The headline is devestating:"
+    "The boss plops a printed news article on your desk. The headline is devastating:"
 
     "{i}[company_name]'s AI hiring software favors candidates based on gender and race{/i}"
 
@@ -329,13 +332,13 @@ label scenario5:
     scene office with fade
     "{i}You're sitting at your desk when you get a phone call. You pick it up.{/i}"
     
-    # madison comes in 
+    show madison talking at center with moveinright
 
     pr "Hey! I don’t think we’ve properly met. I’m Madison, I handle PR for [company_name]."
 
     pr "I've been told to inform you that we've got a situation here."
 
-    # madison nervous
+    show madison worried
 
     pr "Candidates are starting to revolt and raise concerns about how we use AI in our hiring process."
 
@@ -343,19 +346,21 @@ label scenario5:
 
     pr "This might turn into a straight-up PR disaster for the company."
 
+    show madison talking
+
     pr "We need to get ahead of this, and I think we do it through some form of transparency."
 
-    pr "The question is—how transparent do we want to be?"
+    pr "The question is: how transparent do we want to be?"
 
     menu:
-        pr "What do you think?"
+        pr "What should our message to the public look like?"
 
         "Post a general statement on our website and job boards (-$0)":
             $ policy_score -= 10
             $ impact_score -= 20
             $ company_money += 0
             "{i}Publish something like ‘We use AI tools to assist in the recruiting process.’ Hopefully this will calm some nerves, but it may come off as evasive.{/i}"
-            # madison moves out
+            hide madison with moveoutleft
             jump scenario6
         "Create a detailed statement on how AI is used at the company, including details about tools, rules, and criteria (-$0)":
             $ policy_score += 30
@@ -363,7 +368,7 @@ label scenario5:
             $ company_money += 0
 
             "{i}Builds trust with the public and sets an example, but may also open the door to questions and conversations the company is not yet ready to handle.{/i}"
-            # madison moves out
+            hide madison with moveoutleft
             jump scenario6
         "Provide an option for candidates to opt-out of AI screening—but make it discreet (-$50)":
             $ policy_score -= 10
@@ -371,7 +376,7 @@ label scenario5:
             $ company_money -= 50
 
             "{i}May make candidates more comfortable, but could it be seen as an admission that the system is untrustworthy?{/i}"
-            # madison moves out
+            hide madison with moveoutleft
             jump scenario6
 
 label scenario6:
