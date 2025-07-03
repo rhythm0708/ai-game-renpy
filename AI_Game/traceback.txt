@@ -1,62 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing the padding property of anonymous style:
-  File "game/script.rpy", line 44, in script
-    "This is [company_name]."
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-TypeError: 'int' object is not subscriptable
+While running game code:
+  File "game/options.rpy", line 21, in script
+    define gui.show_name = false
+  File "game/options.rpy", line 21, in <module>
+    define gui.show_name = false
+NameError: name 'false' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 44, in script
-    "This is [company_name]."
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2586, in execute
-    Say.execute(self)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 593, in execute
-    statement_name("say")
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 58, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/exports/statementexports.py", line 257, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/core.py", line 1581, in do_with
-    return self.interact(trans_pause=True,
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/core.py", line 2218, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/core.py", line 2748, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/screen.py", line 485, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
-    d.visit_all(callback, seen)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/displayable.py", line 424, in visit_all
-    for d in self.visit():
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/layout.py", line 1376, in visit
-    self.style._visit_window(rv.append)
-  File "style.pyx", line 541, in renpy.style.StyleCore._visit_window
-  File "style.pyx", line 528, in renpy.style.StyleCore._get_unoffset
-  File "style.pyx", line 493, in renpy.style.StyleCore._get
-  File "style.pyx", line 717, in renpy.style.build_style
-  File "style.pyx", line 714, in renpy.style.build_style
-  File "gen3-static/style_functions.pyx", line 1573, in style_functions.padding_property
-  File "include/style_common.pxi", line 30, in style_functions.index_0
-TypeError: 'int' object is not subscriptable
+  File "game/options.rpy", line 21, in script
+    define gui.show_name = false
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2248, in execute
+    self.set()
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2262, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/python.py", line 1211, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/options.rpy", line 21, in <module>
+    define gui.show_name = false
+NameError: name 'false' is not defined
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.3.7.25031702
 AI Hiring Edition 1.0
-Thu Jun 19 15:30:58 2025
+Fri Jun 20 15:27:56 2025
