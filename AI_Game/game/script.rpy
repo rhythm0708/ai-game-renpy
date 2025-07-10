@@ -4,16 +4,16 @@ define boss = Character("Boss", color="#43469D")
 define hr = Character("Karim", color="#1AD87A")
 define pr = Character("Madison", color="#FFDD1B")
 
-default company_name = "{color=#297E89}Fintek{/color}"
-default crypto_coin = "{color=#1AD87A}CorgiCoin{/color}"
+default company_name = "{color=#43469D}Fintek{/color}"
+default crypto_coin = "{color=#FFDD1B}CorgiCoin{/color}"
 
-# Stats.
+# Initial Stats.
 default people_score = 50
 default process_score = 50
 default tech_score = 50
 default policy_score = 50
 default impact_score = 50
-
+default boss_satisfaction = 50
 default company_money = 250
 
 # HUD.
@@ -30,7 +30,7 @@ screen money_hud():
         hbox:
             spacing 10
             image "images/UI/icon money.png" zoom 0.05
-            text "Money: $ [company_money]k" size 24 color "#fff"
+            text "Budget: $ [company_money]k" size 24 color "#fff"
 default hover_text = ""
 
 # Transforms.
@@ -46,6 +46,7 @@ transform bobble:
 init python:
     style.window.padding = (10, 10, 10, 10)
 
+# -------------- GAME START HERE --------------------------
 label start:
     scene smoke
     show screen money_hud
@@ -112,7 +113,7 @@ label scenario1:
 
     # computer screen with AI screening program
 
-    "{i}Your boss opens their laptop and gestures to the screen. On it, you see the familiar upload boxes, percentages, and CAPTCHAs of an A.I software.{/i}"
+    "{i}Your boss opens their laptop and gestures to the screen. On it, you see the familiar progress bars, upload prompts, and verification steps of A.I software.{/i}"
 
     show boss neutral at bobble
 
@@ -122,16 +123,15 @@ label scenario1:
 
     boss "You’re a tech consultant, what do you think? We need your guidance on how to best implement this tool."
 
+    $ hover_text = ""
     show screen decision_menu_1
 
     "How should the company implement its AI hiring tool?"
     
-
 screen decision_menu_1():
     modal True
 
     frame:
-        # background None
         background "#303030b2"
         xfill True
         yfill True
@@ -156,7 +156,7 @@ screen decision_menu_1():
                 hover_background "#AAAAAACC" 
                 action Jump("choice_1a")
 
-                hovered SetVariable("hover_text", "{i}This will maximize cost savings, and we’ll eventually need it anyway (+$100k){/i}")
+                hovered SetVariable("hover_text", "{i}This will maximize cost savings, and we’ll eventually need it anyway{/i} (+$100k)")
                 unhovered SetVariable("hover_text", "")
             
             null height 10
@@ -187,13 +187,20 @@ screen decision_menu_1():
 
         null height 20
 
-        text hover_text size 24 color "#CCCCCC" xalign 0.5 italic True
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        # xmaximum int(config.screen_width / 2)
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
 
 label choice_1a:
-    $ process_score += 20
-    $ people_score -= 10
-    $ impact_score -= 10
+    $ update_scores(-10, 20, 10, -10, -10)
     $ company_money += 100
+    $ boss_satisfaction += 10
 
     hide screen decision_menu_1
     "{i}You encourage the boss to immediately deploy the AI tool and fix problems as they come up.{/i}"
@@ -204,8 +211,7 @@ label choice_1a:
     jump scenario2
 
 label choice_1b:
-    $ process_score += 10
-    $ people_score += 10
+    $ update_scores(10, 10, 5, 0, 5, 0)
     $ company_money -= 30
 
     hide screen decision_menu_1
@@ -218,10 +224,9 @@ label choice_1b:
     jump scenario2
 
 label choice_1c:
-    $ process_score -= 10
-    $ tech_score -= 10
-    $ people_score += 10
+    $ update_scores (10, -10, -10, 10, 15)
     $ company_money -= 150
+    $ boss_satisfaction -= 20
 
     hide screen decision_menu_1
     mc "AI is still a burgeoning technology. We shouldn't implement it so recklessly."
@@ -281,39 +286,128 @@ label scenario2:
 
     hr "So, any advice? What should we tell the vendor?"
 
-    menu:
-        hr "What should we tell the vendor?"
+    $ hover_text = ""
+    show screen decision_menu_2 
 
-        "Go for it — let's roll it out (+$80k)":
-            $ process_score += 20
-            $ tech_score += 20
-            $ impact_score -= 20
-            $ people_score -= 20
-            $ company_money += 80
+    "What should the company tell the vendor?"
 
-            "{i}This system seems promising and it hasn’t caused issues so far. This could save the company serious time and money.{/i}"
-            hide karim with moveoutleft
-            jump scenario3
-        "Request that the vendor submit fairness audits and pass bias-testing standards (-$100k)":
-            $ process_score -= 10
-            $ tech_score += 20
-            $ company_money -= 100
+screen decision_menu_2():
+    modal True
 
-            "{i}They might not do it, and this might take a while. But this would help maintain fairness and trust within candidates.{/i}"
-            hide karim with moveoutleft
-            jump scenario3
-        "Propose launching a controlled pilot in one department (-$20k)":
-            $ process_score += 10
-            $ impact_score += 10
-            $ company_money -= 20
+    frame:
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
 
-            "{i}Collect data, monitor feedback from candidates, before deciding if it’s worth scaling up. Slower for sure—but safer, and more methodical.{/i}"
-            hide karim with moveoutleft
-            jump scenario3
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            textbutton "Purchase the software package and roll it out immediately":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_2a")
+
+                hovered SetVariable("hover_text", "{i}This system seems promising and it hasn’t caused issues so far. This could save the company serious time and money (+80k){/i}")
+                unhovered SetVariable("hover_text", "")
+            
+            null height 10
+
+            textbutton "Request that the vendor submit fairness audits and pass bias-testing standards":
+                text_color "#333333"
+                background "#cccccccc"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_2b")
+
+                hovered SetVariable("hover_text", "{i}They might not do it, and this might take a while. But this would help maintain fairness and trust within candidates{/i} (-$100k)")
+                unhovered SetVariable("hover_text", "")
+
+            null height 10
+
+            textbutton "Launch a controlled pilot in one department":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_2c")
+
+                hovered SetVariable("hover_text", "{i}Collect data, monitor feedback from candidates, before deciding if it’s worth scaling up. Slower for sure—but safer, and more methodical{/i} (-$20k)")
+                unhovered SetVariable("hover_text", "")
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+
+# EDIT TEXT.
+label choice_2a:
+    $ update_scores(-20, 20, 20, 0, -20)
+    $ company_money += 80
+    $ boss_satisfaction += 10
+
+    hide screen decision_menu_2
+    "{i}You encourage [hr] to purchase the software package and implement it as soon as possible.{/i}"
+    mc "I've heard about this concept. It's promising."
+    mc "Many Fortune-500 companies have already implemented this technology and done the testing for us."
+    mc "This should be a no-brainer. We can deal with the issues as they come up."
+    "{i}[hr] nods and agrees. He walks away to prepares a memo for the software vendor.{/i}"
+
+    hide karim with moveoutleft
+    jump scenario2
+
+label choice_2b:
+    $ update_scores(10, -10, 0, 10, 10)
+    $ company_money -= 100
+
+    hide screen decision_menu_2
+    mc "It's always a good idea to perform checks with these types of things."
+    mc "Overpromise, underdeliver. And the customers will always blame us. It's best if we do our due diligence."
+    hr "Won't that be expensive? But I suppose you're right. Let's do it your way then."
+    "{i}You and [hr] part ways with some sense of mutual agreement.{/i}"
+
+    hide karim with moveoutleft
+    jump scenario3
+
+label choice_2c:
+    $ update_scores (0, -15, -15, 0, 15)
+    $ company_money -= 20
+    $ boss_satisfaction -= 20
+
+    hide screen decision_menu_2
+    mc "I think we're moving too fast. We should start with a controlled pilot in one or two departments at most."
+    mc "This technology is... new. We shouldn't just dive right into it."
+    mc "We should observe what happens in the first case and adapt from there. If it creates legal liability issues then that would be bad for the company in the long run." 
+    "{i}[hr] gives you an understanding look.{/i}"
+    "{i}He expresses agreement, but he doesn't seem too happy about it.{/i}"
+    "{i}The look on his face is of concern. He scuttles out of the room.{/i}"
+
+    hide karim with moveoutleft
+    jump scenario3
 
 label scenario3:   
     scene office with fade
     show boss neutral at center with moveinright
+    
 
     boss "So I read this article."
 
@@ -357,37 +451,127 @@ label scenario3:
 
     boss "So you tell me: what’s the best way we can implement this to avoid any blowback."
 
-    menu:
-        mc "This is a tough one. What should I recommend?"
+    $ hover_text = ""
+    show screen decision_menu_3
 
-        "Start with an industry-standard behavioral dataset (-$100k)":
-            $ process_score += 20
-            $ tech_score += 20
-            $ impact_score -= 10
-            $ company_money -= 100
+    "This is a tough one. What should I recommend?"
 
-            "{i}Leverage widely accepted benchmarks for professional behavior and communication. It works, and avoids the headache of collecting data on company culture{/i}"
-            hide boss with moveoutleft
-            jump scenario4
-        "Train the system on employee behavior data (-$50k)":
-            $ process_score += 30
-            $ tech_score += 30
-            $ impact_score -= 20
-            $ people_score -= 20
-            $ company_money -= 50
+screen decision_menu_3():
+    modal True
 
-            "{i}This creates a highly tailored system based on our company culture, but it raises the risk of employee backlash and data security concerns{/i}"
-            hide boss with moveoutleft
-            jump scenario4
-        "Only enable basic tracking—no scores, just qualitative comments (-$20k)":
-            $ tech_score += 10
-            $ people_score += 10
-            $ impact_score -= 10
-            $ company_money -= 20
+    frame:
+        # background None
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
 
-            "{i}Use AI to highlight patterns or red flags, but keep decisions in human hands. Less efficient, but more defensible if a problem arises{/i}"
-            hide boss with moveoutleft
-            jump scenario4
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            textbutton "Implement it with an industry-standard behavioral dataset":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_3a")
+
+                hovered SetVariable("hover_text", "{i}Leverage widely accepted benchmarks for professional behavior and communication. It works, and avoids the headache of collecting data on company culture{/i} (-100k)")
+                unhovered SetVariable("hover_text", "")
+            
+            null height 10
+
+            textbutton "Collect employee behavior data and train the system on that":
+                text_color "#333333"
+                background "#cccccccc"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_3b")
+
+                hovered SetVariable("hover_text", "{i}This creates a highly tailored system based on our company culture, but it raises the risk of employee backlash and data security concerns{/i} (-$50k)")
+                unhovered SetVariable("hover_text", "")
+
+            null height 10
+
+            textbutton "Only enable basic tracking—no scores, just qualitative comments":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_3c")
+
+                hovered SetVariable("hover_text", "{i}Use AI to highlight patterns or red flags, but keep decisions in human hands. Less efficient, but more defensible if a problem arises{/i} (-$20k)")
+                unhovered SetVariable("hover_text", "")
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+
+# EDIT TEXT.
+label choice_3a:
+    $ update_scores(0, 15, 15, -5, -10)
+    $ company_money -= 100
+    $ boss_satisfaction += 20
+
+    hide screen decision_menu_3
+    "{i}A bit of a dystopian practice, but you wouldn't dare let your boss know that.{/i}"
+    "{i}You know that some companies track employee behavior data to train these datasets...{/i}"
+    "{i}... but you decide not to let your boss know about that.{/i}"
+    "{i}Instead, you talk to your boss about buying an industry-standard behavioral dataset: it tracks basic benchmarks for strong company performance, for a one-time price.{/i}"
+    "{i}Your boss listens attentively. He seems to be weighing the pros and cons in his mind.{/i}"
+    "{i}Next week in the office, you hear coworkers talk about how the boss decided to go for it.{/i}"
+
+    hide boss with moveoutleft
+    jump scenario4
+
+label choice_3b:
+    $ update_scores(-20, 30, 30, -15, -20)
+    $ company_money -= 50
+    $ boss_satisfaction += 25
+
+    hide screen decision_menu_3
+    "{i}A bit of a dystopian practice, but you wouldn't dare let your boss know that.{/i}"
+    "{i}You know that most companies who do this tend to collect detailed data on their employees.{/i}"
+    "{i}Keystroke monitoring, biometric scans... you never thought your company would be part of this transformation.{/i}"
+    "{i}You let your boss know about this 'common industry practice.'{/i}"
+    "{i}You think you may have noticed a glint in his eye as you brought up employee monitoring.{/i}"
+    "{i}You leave feeling not great about your contribution.{/i}"
+
+    hide boss with moveoutleft
+    jump scenario4
+
+label choice_3c:
+    $ update_scores (10, -10, 0, 0, 0)
+    $ company_money -= 20
+    $ boss_satisfaction -= 20
+
+    hide screen decision_menu_3
+    "{i}You're a bit skeptical about this technology and you let your boss know.{/i}"
+    "{i}You recommend holding back for now. Instead, you propose using AI in a simpler manner: just use it to analyze the video and give broad comments.{/i}"
+    "{i}Your boss seems disappointed and opens his mouth to speak.{/i}"
+    "{i}But, he quickly closes his mouth again. He must have realized that you're the expert.{/i}"
+    "{i}Weeks later, you hear no talk about the software package ever being implemented.{/i}"
+
+    hide boss with moveoutleft
+    jump scenario4
 
 label scenario4:
     scene office with fade
@@ -411,36 +595,126 @@ label scenario4:
 
     boss "We can’t just ignore this. I need your help again. What’s your call?"
 
-    menu:
-        boss "What should we tell the public?"
+    $ hover_text = ""
+    show screen decision_menu_4
 
-        "Double down. Claim that the system is optimized for performance (-$0k)":
-            $ people_score -= 20
-            $ impact_score -= 20
-            $ company_money += 0
+    "What should we tell the public?"
 
-            "{i}Frame the algorithm as merit-based and outcome-driven. Claim that patterns are just incidental, but this risks provoking public backlash and internal divisions.{/i}"
-            hide boss with moveoutleft
-            jump scenario5
-        "Temporarily recall the AI system and revise it to meet fairness standards (-$150k)":
-            $ people_score += 20
-            $ impact_score += 20
-            $ process_score -= 10
-            $ tech_score -= 10
-            $ company_money -= 150
+screen decision_menu_4():
+    modal True
 
-            "{i}Take the system down and address the bias directly. We would take a hit to our reputation and profits, but this shows leadership and accountability in the long run.{/i}"
-            hide boss with moveoutleft
-            jump scenario5
-        "Keep the AI, but introduce a secondary fairness check (-$80k)":
-            $ impact_score += 10
-            $ process_score += 10
-            $ tech_score += 10
-            $ company_money -= 80
+    frame:
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
 
-            "{i}A compromise. Slower, but more defensible.{/i}"
-            hide boss with moveoutleft
-            jump scenario5
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            textbutton "Double down. Claim that the system is optimized for performance":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_4a")
+
+                hovered SetVariable("hover_text", "{i}Frame the algorithm as merit-based and outcome-driven. Claim that patterns are just incidental, but this risks provoking public backlash and internal divisions{/i} (-0k)")
+                unhovered SetVariable("hover_text", "")
+            
+            null height 10
+
+            textbutton "Temporarily recall the AI system and revise it to meet fairness standards":
+                text_color "#333333"
+                background "#cccccccc"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_4b")
+
+                hovered SetVariable("hover_text", "{i}Take the system down and address the bias directly. We would take a hit to our reputation and profits, but this shows leadership and accountability in the long run{/i} (-$150k)")
+                unhovered SetVariable("hover_text", "")
+
+            null height 10
+
+            textbutton "Keep the AI, but introduce a secondary fairness check":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_4c")
+
+                hovered SetVariable("hover_text", "{i}A compromise. Slower, but more defensible{/i} (-$80k)")
+                unhovered SetVariable("hover_text", "")
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+
+# EDIT TEXT.
+label choice_4a:
+    $ update_scores(-20, 0, 0, -10, -10)
+    $ company_money += 0
+    $ boss_satisfaction += 10
+
+    hide screen decision_menu_4
+    "{i}You encourage the boss to double down on the decision."
+    mc "The company will look weak and guilty if we back down now. We have to double down."
+    mc "Say that our company values performance over all, and that AI is the future of a fair and lateral hiring process."
+    "{i}Your boss nods. He seems to agree.{/i}"
+    "{i}He rushes to give instructions to the rest of the staff.{/i}"
+
+    hide boss with moveoutleft
+    jump scenario5
+
+label choice_4b:
+    $ update_scores(20, -20, -10, 10, 10)
+    $ company_money -= 150
+    $ boss_satisfaction += 10
+
+    hide screen decision_menu_4
+    mc "This seems bad. I think it's a good idea to temporarily disable the AI hiring system and resume human-led hiring."
+    boss "Won't that make us look really guilty?"
+    mc "Yes, but we already look bad. This gives us a chance to recover our reputation in the long run. At least it shows that we acknowledge our mistakes and work towards becoming better."
+    "{i}Your boss nods, seeming to understand.{/i}"
+    "{i}He scribbles a note for the PR team and thanks you, before shuffling off.{/i}"
+
+    hide boss with moveoutleft
+    jump scenario5
+
+label choice_4c:
+    $ update_scores(0, 0, 0, 5, 5)
+    $ company_money -= 80
+    $ boss_satisfaction -= 20
+
+    hide screen decision_menu_4
+    mc "It's too expensive to rewrite the AI hiring system, but it also looks bad if we don't acknowledge it."
+    "{i}You pause and think for a moment.{/i}"
+    mc "I think we should keep the AI system running, but add a secondary check — have humans review the rejected applicants and the reasons why, to make sure they're valid."
+    mc "This would quell the criticisms about AI unfairness and probably increase compliance with other hiring standards."
+    boss "{i}That would cost a pretty penny though...{/i}"
+    "{i}You thought you heard the boss mutter something underneath his breath. He didn't seem happy.{/i}"
+    "{i}You leave the conversation feeling confused. You thought you had found a good compromise...{/i}"
+
+    hide boss with moveoutleft
+    jump scenario5
 
 label scenario5:
     scene office with fade
@@ -466,32 +740,125 @@ label scenario5:
 
     pr "The question is: how transparent do we want to be?"
 
-    menu:
-        pr "What should our message to the public look like?"
+    $ hover_text = ""
+    show screen decision_menu_5
 
-        "Post a general statement on our website and job boards (-$0k)":
-            $ policy_score -= 10
-            $ impact_score -= 20
-            $ company_money += 0
-            "{i}Publish something like ‘We use AI tools to assist in the recruiting process.’ Hopefully this will calm some nerves, but it may come off as evasive.{/i}"
-            hide madison with moveoutleft
-            jump scenario6
-        "Create a detailed statement on how AI is used at the company, including details about tools, rules, and criteria (-$0k)":
-            $ policy_score += 30
-            $ impact_score += 20
-            $ company_money += 0
+    "Another PR disaster. What should the company's message to the public look like?"
 
-            "{i}Builds trust with the public and sets an example, but may also open the door to questions and conversations the company is not yet ready to handle.{/i}"
-            hide madison with moveoutleft
-            jump scenario6
-        "Provide an option for candidates to opt-out of AI screening—but make it discreet (-$50k)":
-            $ policy_score -= 10
-            $ impact_score -= 10
-            $ company_money -= 50
+screen decision_menu_5():
+    modal True
 
-            "{i}May make candidates more comfortable, but could it be seen as an admission that the system is untrustworthy?{/i}"
-            hide madison with moveoutleft
-            jump scenario6
+    frame:
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
+
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            textbutton "Post a general statement on our website and job boards":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_5a")
+
+                hovered SetVariable("hover_text", "{i}Publish something like ‘We use AI tools to support our recruitment process.’ Hopefully this will calm some nerves, but it may come off as evasive{/i} (-0k)")
+                unhovered SetVariable("hover_text", "")
+            
+            null height 10
+
+            textbutton "Create a detailed statement on how AI is used at the company, including details about tools, rules, and criteria":
+                text_color "#333333"
+                background "#cccccccc"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_5b")
+
+                hovered SetVariable("hover_text", "{i}Builds trust with the public and sets an example, but may also open the door to questions and conversations the company is not yet ready to handle{/i} (-$0k)")
+                unhovered SetVariable("hover_text", "")
+
+            null height 10
+
+            textbutton "Provide an option for candidates to opt-out of AI screening—but make it discreet":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_5c")
+
+                hovered SetVariable("hover_text", "{i}May make candidates more comfortable, but could it be seen as an admission that the system is untrustworthy?{/i} (-$50k)")
+                unhovered SetVariable("hover_text", "")
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+
+# EDIT TEXT.
+label choice_5a:
+    $ update_scores(-10, 0, 0, -5, -15)
+    $ company_money += 0
+    $ boss_satisfaction += 20
+
+    hide screen decision_menu_5
+    "{i}'Go general,' you say almost instinctively. There will be critics, but this will quell the immediate criticisms of the public.{/i}"
+    "{i}[pr] looks almost shocked. She gives you a look that kind of says: 'Wow. You're a natural.'{/i}"
+    "{i}The conversation was short but productive.{/i}"
+    "{i}A few weeks later, the public outcry about the company becomes quiet.{/i}"
+    "{i}Is [company_name] finally in the clear?{/i}"
+
+    hide madison with moveoutleft
+    jump scenario6
+
+label choice_5b:
+    $ update_scores(15, 0, 0, 15, 5)
+    $ company_money += 0
+    $ boss_satisfaction += 0
+
+    hide screen decision_menu_5
+    mc "We should take the transparent route."
+    mc "I've seen a lot of companies make a mistake by not acknowledging their use of technology, but that almost always ends badly."
+    mc "It sews long-term distrust within the company's customer base, and even when the public stops complaining, customers don't always return."
+    "{i}[pr] gives you a thoughtful, but almost relieved nod.{/i}"
+    "{i}'I trust you,' she says, before rushing to tell the rest of her team.{/i}"
+
+    hide madison with moveoutleft
+    jump scenario6
+
+label choice_5c:
+    $ update_scores(-10, 0, 0, -10, -10)
+    $ company_money -= 50
+    $ boss_satisfaction -= 20
+
+    hide screen decision_menu_5
+    "{i}'We can't be held liable if it was the candidate's choice,' you think. That's probably the easiest way to get out of this.{/i}"
+    mc "Why don't we provide an option, a disreet one, that allows candidates to opt-out of AI screening. We can't be held liable if candidates have that decision."
+    "{i}[pr] gives you a look. It's a mixture of concern and confusion.{/i}"
+    "{i}You can't tell if she's nervous or just processing.{/i}"
+    mc "Trust me. It's how we get out of this."
+    "{i}[pr] nods, but you can't tell if it's in agreement or defeated acceptance.{/i}"
+
+    hide madison with moveoutleft
+    jump scenario6
 
 label scenario6:
     scene office with fade
@@ -509,82 +876,195 @@ label scenario6:
 
     boss "You've been guiding us so far, and doing a pretty good job, so the executive board would like your input."
 
-    menu:
-        boss "What's the best strategy for taking our hiring strategy international?"
+    $ hover_text = ""
+    show screen decision_menu_6
 
-        "Launch internationally and apply a ‘figure it out as we go’ approach (+$?)":
-            $ process_score += 40
-            $ tech_score += 30
-            $ policy_score -= 20
-            $ impact_score -= 20
-            $ company_money += 200
-            "{i}Roll it out in all markets and adapt as problems come up. Fast, bold, and risky.{/i}"
+    "What's the best strategy to take our hiring program international?"
 
-            $ company_money -= 300
-            "{i}In this scenario, the company gains an intiial surge of capital but spends more in the long-run as they battle legal and consumer acceptance issues.{/i}"
+screen decision_menu_6():
+    modal True
 
-            hide boss with moveoutleft
-            jump ending_scene
-        "Expand slowly, region by region. Research local laws and cultural norms before implementation (+$?)":
-            $ process_score += 20
-            $ tech_score += 20
-            $ policy_score += 20
-            $ company_money += 20
-            "{i}Slower and more methodical. Builds trust and avoids legal trouble, but highly resource-intensive—can the company survive this transition?{/i}"
-            hide boss with moveoutleft
-            jump ending_scene
-        "Update and localize the AI hiring system to fit each region's cultural standards (+$?)":
-            $ process_score += 20
-            $ tech_score += 20
-            $ policy_score += 20
-            $ company_money -= 100
-            "{i}Tailor the AI to respect local cultural norms, hiring expectations, and regional regulations. Thoughtful and effective — but expensive.{/i}"
-            hide boss with moveoutleft
-            jump ending_scene
+    frame:
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
+
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            textbutton "Launch internationally and apply a ‘figure it out as we go’ approach":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_6a")
+
+                hovered SetVariable("hover_text", "{i}Roll it out in all markets and adapt as problems come up. Fast, bold, and risky.{/i} (-?k)")
+                unhovered SetVariable("hover_text", "")
+            
+            null height 10
+
+            textbutton "Expand slowly, region by region. Research local laws and cultural norms before implementation":
+                text_color "#333333"
+                background "#cccccccc"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_6b")
+
+                hovered SetVariable("hover_text", "{i}Slower and more methodical. Builds trust and avoids legal trouble, but highly resource-intensive—can the company survive this transition?{/i} (-$?k)")
+                unhovered SetVariable("hover_text", "")
+
+            null height 10
+
+            textbutton "Update and localize the AI hiring system to fit each region's cultural standards":
+                text_color "#333333"
+                background "#CCCCCCCC"
+                padding (25, 20)
+                xsize 900
+                hover_background "#AAAAAACC" 
+                action Jump("choice_6c")
+
+                hovered SetVariable("hover_text", "{i}Tailor the AI to respect local cultural norms, hiring expectations, and regional regulations. Thoughtful and effective — but expensive{/i} (-$?k)")
+                unhovered SetVariable("hover_text", "")
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+
+# EDIT TEXT.
+label choice_6a:
+    $ update_scores(0, 30, 30, -30, -20)
+    $ company_money += 0
+    $ boss_satisfaction += 30
+
+    hide screen decision_menu_6
+    mc "Let's just go for it. We can figure it out as we go."
+    mc "There's no real way to know how things will go until we let it happen. Plus, this will save the company a ton of time and cash."
+    "{i}For the first time, your boss seems to smile.{/i}"
+    # BOSS HAPPY
+    boss "And here I was, thinking that you'd be more hesitant. Thanks for the reassurance."
+    "{i}The boss slaps you on the back, and returns to his desk drinking coffee.{/i}"
+
+    hide boss with moveoutleft
+    jump ending_scene
+
+label choice_6b:
+    $ update_scores(0, 20, 10, 20, 20)
+    $ company_money += 0
+    $ boss_satisfaction += 10
+
+    hide screen decision_menu_6
+    mc "Okay well, why don't we take a careful approach? We should assign the legal team to do research on local laws and cultures before wildly implementing the tech."
+    mc "Who knows? We might, or probably will encounter a lot of resistance to this kind of stuff overseas."
+    mc "Not just by candidates, by local law enforcement and governments too."
+    "{i}Your boss' mouth slowly opens to a smile.{/i}"
+    # BOSS HAPPY
+    boss "Hoho! That's right! That's a smart idea. That's why we hired you, pal. Thanks."
+    "{i}Chuckling while holding his mug of coffee, he waddles off to inform the rest of the staff.{/i}"
+
+    hide boss with moveoutleft
+    jump ending_scene
+
+label choice_6c:
+    $ update_scores(0, 20, 20, 10, 0)
+    $ company_money -= 150
+    $ boss_satisfaction -= 40
+
+    hide screen decision_menu_6
+    "{i}You think about your boss' proposal. You notice and subsequently point out some of the flaws.{/i}"
+    mc "Well, in its current state, our AI hiring system is only designed to abide by our country's laws. When we go overseas, we may face legal trouble and resistance."
+    mc "One thing I think we might have to do is update the AI for each region that we roll it out into. We have to make sure that it abides by local laws and customs."
+    "{i}Your boss looks deep in thought. He seems uncomfortable with the complexity and cost of this whole endeavor.{/i}"
+    mc "Then, we'd have to research each local region, which would probably require some hours from our legal staff. But that's what we have to do to do it right."
+    "{i}Your boss finally looks up at you. He clearly has mixed feelings about this.{/i}"
+    "{i}'Hard to argue with right, I suppose.'{/i}"
+    "{i}He tells you he'll get back to you. He stumbles back to his desk without another word.{/i}"
+
+    hide boss with moveoutleft
+    jump ending_scene
 
 label ending_scene:
-    # ending scene.
-
-    # Find top and worst trait.
-    $ scores = [people_score, process_score, tech_score, policy_score, impact_score]
-    # Flawed but ok for prototype.
-    $ max_index = scores.index(max(scores))
-    $ min_index = scores.index(min(scores))
-
+    # COMPANY STATUS.
     if company_money > 100:
-        "Good ending."
+        "Good Ending"
         "{i}[company_name] remains afloat after 5 years and seems to be in a better position. It attempts to use AI responsibly and is a leader in its space.{/i}"
     elif company_money > 0:
-        "Neutral ending"
+        "Neutral Ending"
         "{i}[company_name] struggles through the next five years but barely manages to stay afloat.{/i}"
         "{i}Its fate hangs in the balance as customers seem to be just accepting of their practices.{/i}"
     else:
-        "Bad ending"
+        "Bad Ending"
         "{i}After just one year, [company_name] goes bankrupt and fails to win back the trust of the people.{/i}"
-        "{i}Customers and employees grow increasingly wary and slowly began to abandon the company.{/i}"
+        "{i}Customers and employees grow increasingly wary and slowly begin to abandon the company.{/i}"
     
-    "RESULTS:"
-    if max_index == 0:
-        "Your company seems to prioritize the well-being of employees."
-    elif max_index == 1:
-        "Your company seems to prioritize efficient processes and saving money."
-    elif max_index == 2:
-        "Your company seems to embrace technology and innovation."
-    elif max_index == 3:
-        "Your company is driven by strong policy and ethics."
+    # REPUTATION.
+    if boss_satisfaction < 25:
+        "Your reputation at [company_name] is poor."
+        "You have few friends in the company, and people seem to avoid you."
+        "Coworkers say that you make their jobs more difficult."
+        "Over time, your boss stops approaching you for advice, and eventually, you are laid off."
+    elif boss_satisfaction > 80:
+        "You have an excellent reputation at [company_name]."
+        "You have made good acquaintances at the company, and coworkers frequently consult you for advice."
+        "Whether you give good advice or not, we're unsure."
+        "When your contract expires, the company re-hires you with a small bonus."
+        "You retire comfortably after working at [company_name] for ten years."
     else:
-        "Your company seems to prioritize the feelings of consumers."
+        "You are a respected employee at [company_name]."
+        "Coworkers approach you for small talk, and you are on friendly terms with most of upper management."
+        "You are respected by your associates, and the company keeps you on year after year."
+        "Your continued employment seems to be tied with the company's trajectory."
+        "Some questions keep you up at night:"
+        "{i}If the company becomes too successful, will they still need you?{/i}"
+        "{i}Should I perform just well enough to be essential?{/i}"
+        "Only time will tell."
     
-    if min_index == 0:
-        "However, your negligence over the feelings of employees has had negative consequence."
-    elif min_index == 1:
-        "However, your inability to design efficient and well-run processes has put you behind your competitors."
-    elif min_index == 2:
-        "However, your refusal to adopt to the newest tech trends have put you behind your competitors."
-    elif min_index == 3:
-        "However, your challenge of policy and ethics in running your company has put you in trouble with lawmakers."
-    else:
-        "However, your company has not prioritized the consumer enough, and has struggled to reach the heights that it once attained."
+    # Scores.
+    "Individual Scores"
+    "{b}PEOPLE{/b} (Did you treat customers and employees well?): [evaluate_score(people_score)]"
+    "{b}PROCESS{/b} (How efficient are your processes? Did you help the company save time and money?): [evaluate_score(process_score)]"
+    "{b}TECH{/b} (Did you leverage new technology? Are you ahead or behind competitors?): [evaluate_score(tech_score)]"
+    "{b}POLICY{/b} (Is the company compliant with local and global technology laws?): [evaluate_score(policy_score)]"
+    "{b}IMPACT{/b} (How positively does your company affect people and society?): [evaluate_score(impact_score)]"
 
     "The End" 
     return
+
+# HELPER FUNCTION.
+init python:
+    def update_scores(people_update, process_update, tech_update, policy_update, impact_update):
+        global people_score, process_score, tech_score, policy_score, impact_score
+        people_score += people_update
+        process_score += process_update
+        tech_score += tech_update
+        policy_score += policy_update
+        impact_score += impact_update
+        return
+
+    def evaluate_score(score):
+        if score <= 30:
+            return "Poor"
+        elif score <= 60:
+            return "Fair"
+        elif score <= 80:
+            return "Good"
+        else:
+            return "Excellent"
