@@ -1,11 +1,11 @@
 ﻿# Characters.
 define mc = Character("You", color="#70C3FF")
-define boss = Character("Boss", color="#43469D")
+define boss = Character("Boss", color="#b11f1f")
 define hr = Character("Karim", color="#1AD87A")
 define pr = Character("Madison", color="#FFDD1B")
 
 # Key Names.
-default company_name = "{color=#43469D}Fintek{/color}"
+default company_name = "{color=#297e89}Fintek{/color}"
 default crypto_coin = "{color=#FFDD1B}CorgiCoin{/color}"
 
 # Company Stats - [0-People, 1-Process, 2-Tech, 3-Policy, 4-Impact].
@@ -91,15 +91,15 @@ init python:
 # -------------- GAME STARTS HERE --------------------------
 label start:
     scene smoke
-    show screen money_hud
+    hide screen money_hud
     play music "audio/office theme.mp3"
-    $ renpy.music.set_volume(0.15, channel='music')
+    $ renpy.music.set_volume(0.1, channel='music')
     jump exposition
 
 label exposition:
-    "This is [company_name]."
+    show fintek bldg with dissolve
 
-    show fintek with dissolve
+    "This is [company_name]."
 
     "[company_name] was once a thriving company, but it's been on a downward trajectory since 2015."
 
@@ -110,32 +110,115 @@ label exposition:
     "That's where you come in."
 
     hide fintek with dissolve
-    # fix timing
     show silhouette with dissolve
+    # fix timing
 
-    "You are a tech consultant from {color=#f00}TechRight{/color} hired to overhaul the company’s competitive strategy."
+    "You are a tech consultant from {color=#00a14b}TechRight{/color} hired to overhaul the company’s competitive strategy."
 
     "You’re relatively new, but you think you have what it takes to turn this company around."
 
-    show business card with dissolve
+    hide silhouette with dissolve
+    show business card
 
     "That’s what it says on your business card anyway."
 
-    "For some reason when we printed it, only the name was smudged out. I'll have to fix that."
+    hide business card
 
-    hide business card with dissolve
+    # "For some reason when we printed it, only the name was smudged out. That's strange?"
 
-    "{color=#f00}{i}NOTE: Conserve your money! If you run low on money by the end of the simulation, the company will go out of business. Make decisions carefully!{/color}{/i}"
+    #add a smoother transition here
 
-    hide silhouette with dissolve
+    jump scenario0
+
+label scenario0:
+
+    # elevator scene start
+
+    "{i}It's your first day on the job.{/i}"
+
+    "{i}Your palms are sweaty, but you're confident you can save this company...probably.{/i}"
+
+    mc "Geez, this elevator is taking forever."
+
+    "{i}You can feel your heart racing as the floor grows nearer. Just how will things turn out from each decision you make?{/i}"
+
+    "{i}Suddenly, the doors open to reveal a hairy, stout man in an ill-fitted suit. His eyes crinkle up at the sight of you.{/i}"
+
+    show boss smile at center with moveinbottom 
+
+    boss "Ah, you're here! I'm glad you could make it today. Please come in!"
+
+    "{i}You awkwardly shuffle past him at the elevator doors. This is a welcome surprise.{/i}"
+
+    mc "Hi there. Is this Fintek?"
+
+    boss "Yes, yes, welcome! Let me take you to your office."
+
+    "{i}He leads you down the short hallway until your reach a door near the opposite end.{/i}"
+
+    hide boss smile
+    show office with dissolve
+
+    "{i}The office is sparse. A single desk sat in the center with a small filing cabinet by its side.{/i}"
+
+    "{i}The only decoration is an oddly framed paper with the words 'Office Sweet Office' on it.{/i}"
+
+    show boss smile at center with moveinright
+
+    boss "Office, sweet, office! That's what we like to say here."
+
+    boss "I hope you settle in well, we have a lot of work to do this week."
+
+    hide boss smile
+    show boss neutral at center
+
+    boss "Frankly, the company hasn't been doing too well recently so we're really relying on you to help us get through it."
+
+    menu:
+        boss "How are you feeling?"
+
+        "I'm confident.":
+            mc "I feel pretty confident I can help turn this company around."
+            mc "After all, that's what you hired me to do."
+            hide boss neutral
+            show boss smile
+            boss "I love to hear that."
+        "I'm a bit nervous.":
+            mc "I'm honestly a bit nervous."
+            mc "But I think we can figure it out together."
+            boss "That's understandable. It's your first day, after all."
+            boss "But please try your best, we're in quite the pinch."
+        "Confused.":
+            mc "Honestly, I'm still a little confused about all of it."
+            mc "I'm not really sure what I should be doing."
+            boss "Don't worry, I'll help you settle in first."
+            boss "But please try your best, we're in quite the pinch."
+
+    hide boss smile
+    show boss neutral at center
+    boss "Before you start, I also have to remind you."
+
+    boss "Unfortunately, we can only allocate a budget of $[company_money]k for all your decision-making needs."
+
+    show screen money_hud with dissolve
+
+    boss "Sadly that is all we can afford right now so I hope you spend it wisely."
+
+    "{color=#b11f1f}{i}NOTE: Conserve your money! If you run low on money by the end of the simulation, the company will go out of business. Make decisions carefully!{/color}{/i}"
+
+    boss "Anyway, I'll let you get settled in for now. If you need me, I'll be in my office next door."
+
+    hide boss neutral with moveoutleft
+
     jump scenario1
 
 label scenario1:
+    #######
+
     scene office with fade
 
-    "It's your first day on the job."
-
     "{i}You’re sitting at your desk in front of a mass of spreadsheets when your boss approaches you with a laptop in hand.{/i}"
+    # change this depending on scene
 
     show boss neutral at center with moveinright 
 

@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label scenario_5_decision is defined twice, at File "game/script.rpy", line 578:
-label scenario_5_decision:
-and File "game/script.rpy", line 663:
-label scenario_5_decision:
-
+File "game/script.rpy", line 114: end of line expected.
+    show silhouette.PNG with dissolve
+                   ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Thu Jul 10 22:28:18 2025
+Fri Jul 11 04:28:45 2025
