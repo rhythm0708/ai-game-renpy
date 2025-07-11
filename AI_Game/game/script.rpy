@@ -1,17 +1,21 @@
 ﻿# Characters.
 define mc = Character("You", color="#70C3FF")
-define boss = Character("Boss", color="#b11f1f")
+define boss = Character("Boss", color="#e0452b")
 define hr = Character("Karim", color="#1AD87A")
 define pr = Character("Madison", color="#FFDD1B")
 
-# Key Names.
-default company_name = "{color=#297e89}Fintek{/color}"
-default crypto_coin = "{color=#FFDD1B}CorgiCoin{/color}"
+# Company Info.
+default company_info = {
+    "name": "{color=#4ac7d1}Fintek{/color}",
+    "name_raw": "Fintek",
+    "crypto": "{color=#FFDD1B}CorgiCoin{/color}",
+    "crypto_raw": "CorgiCoin",
+    "consultant": "{color=#00a14b}TechRight{/color}",
+    "consultant_raw": "TechRight"
+}
 
-# Company Stats - [0-People, 1-Process, 2-Tech, 3-Policy, 4-Impact].
-default company_stats = [50, 50, 50, 50, 50]
-default boss_satisfaction = 50
-default company_money = 250
+# Game Manager.
+default game = GameManager()
 
 # Money HUD.
 screen money_hud():
@@ -27,7 +31,7 @@ screen money_hud():
         hbox:
             spacing 10
             image "images/UI/icon money.png" zoom 0.05
-            text "Budget: $ [company_money]k" size 24 color "#fff"
+            text "Budget: $ [game.company_money]k" size 24 color "#fff"
 
 # Decision HUD.
 default hover_text = ""
@@ -73,7 +77,7 @@ screen decision_hud(options):
         yalign 0.65
         background None
         has fixed
-        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+        text hover_text size 24 color "#DDD" text_align 0.5 italic True 
 
 # Transforms.
 transform bobble:
@@ -99,11 +103,11 @@ label start:
 label exposition:
     show fintek bldg with dissolve
 
-    "This is [company_name]."
+    "This is [company_info['name']]."
 
-    "[company_name] was once a thriving company, but it's been on a downward trajectory since 2015."
+    "[company_info['name']] was once a thriving company, but it's been on a downward trajectory since 2015."
 
-    "After a bad investment in [crypto_coin], customers started losing trust and sales have been declining year-over-year."
+    "After a bad investment in [company_info['crypto']], customers started losing trust and sales have been declining year-over-year."
 
     "The company is desperately in search of a strategic leader to guide them in the right direction and win back customers."
 
@@ -113,7 +117,7 @@ label exposition:
     show you with dissolve
     # fix timing
 
-    "You are a tech consultant from {color=#00a14b}TechRight{/color} hired to overhaul the company’s competitive strategy."
+    "You are a tech consultant from [company_info['consultant']] hired to overhaul the company’s competitive strategy."
 
     "You’re relatively new, but you think you have what it takes to turn this company around."
 
@@ -198,7 +202,7 @@ label scenario0:
     show boss neutral at center
     boss "Before you start, I also have to remind you."
 
-    boss "Unfortunately, we can only allocate a budget of $[company_money]k for all your decision-making needs."
+    boss "Unfortunately, we can only allocate a budget of $[game.company_money]k for all your decision-making needs."
 
     show screen money_hud with dissolve
 
@@ -212,9 +216,8 @@ label scenario0:
 
     jump scenario1
 
+# ---------- SCENARIO 1 ------------
 label scenario1:
-    #######
-
     scene office with fade
 
     "{i}You’re sitting at your desk in front of a mass of spreadsheets when your boss approaches you with a laptop in hand.{/i}"
@@ -242,7 +245,7 @@ label scenario1:
 
     show boss neutral at bobble
 
-    boss "It’s an AI resumé-screening program. It scans resumé and cover letters for requirements and keywords, and returns a score for each candidate."
+    boss "It’s an AI resumé-screening program. It scans resumés and cover letters for requirements and keywords, and returns a score for each candidate."
 
     show boss neutral at bobble
 
@@ -272,9 +275,9 @@ label scenario_1_decision:
     return
 
 label choice_1a:
-    $ update_scores(-10, 20, 10, -10, -10)
-    $ company_money += 100
-    $ boss_satisfaction += 10
+    $ game.update_scores(-10, 20, 10, -10, -10)
+    $ game.company_money += 100
+    $ game.boss_satisfaction += 10
 
     hide screen decision_hud
     "{i}You encourage the boss to immediately deploy the AI tool and fix problems as they come up.{/i}"
@@ -285,8 +288,8 @@ label choice_1a:
     jump scenario2
 
 label choice_1b:
-    $ update_scores(10, 10, 5, 0, 0)
-    $ company_money -= 30
+    $ game.update_scores(10, 10, 5, 0, 0)
+    $ game.company_money -= 30
 
     hide screen decision_hud
     mc "It's a good idea to keep employees part of the process, especially during the early stages."
@@ -298,13 +301,14 @@ label choice_1b:
     jump scenario2
 
 label choice_1c:
-    $ update_scores (10, -10, -10, 10, 15)
-    $ company_money -= 150
-    $ boss_satisfaction -= 20
+    $ game.update_scores (10, -10, -10, 10, 15)
+    $ game.company_money -= 150
+    $ game.boss_satisfaction -= 20
 
     hide screen decision_hud
     mc "AI is still a burgeoning technology. We shouldn't implement it so recklessly."
-    mc "Why don't we start off small scale? Let's just use it to... answer frequently-asked candidate questions and we can move from there."
+    mc "Why don't we start off small scale? Let's just use it to answer frequently-asked questions."
+    mc "And if that goes well, we can move up from there."
     "{i}Your boss looks disappointed, he scratches his head.{/i}"
     "{i}He reluctantly nods and takes your advice, but warns that the company must find other ways of cutting costs.{/i}"
     "{i}You get a nervous feeling. You feel that conversation could have gone better.{/i}"
@@ -321,7 +325,7 @@ label scenario2:
 
     hr "Hey! I’m Karim from HR."
 
-    hr "I’ve been working at [company_name] since 2015. I've heard some good things about you from the boss. Thanks for helping out."
+    hr "I’ve been working at [company_info['name']] since 2015. I've heard some good things about you from the boss. Thanks for helping out."
 
     show karim talking
 
@@ -383,9 +387,9 @@ label scenario_2_decision:
     return
 
 label choice_2a:
-    $ update_scores(-20, 20, 20, 0, -20)
-    $ company_money += 80
-    $ boss_satisfaction += 10
+    $ game.update_scores(-20, 20, 20, 0, -20)
+    $ game.company_money += 80
+    $ game.boss_satisfaction += 10
 
     hide screen decision_hud
     "{i}You encourage [hr] to purchase the software package and implement it as soon as possible.{/i}"
@@ -398,8 +402,8 @@ label choice_2a:
     jump scenario3
 
 label choice_2b:
-    $ update_scores(10, -10, 0, 10, 10)
-    $ company_money -= 100
+    $ game.update_scores(10, -10, 0, 10, 10)
+    $ game.company_money -= 100
 
     hide screen decision_hud
     mc "It's always a good idea to perform checks with these types of things."
@@ -411,9 +415,9 @@ label choice_2b:
     jump scenario3
 
 label choice_2c:
-    $ update_scores (0, -15, -15, 0, 15)
-    $ company_money -= 20
-    $ boss_satisfaction -= 20
+    $ game.update_scores (0, -15, -15, 0, 15)
+    $ game.company_money -= 20
+    $ game.boss_satisfaction -= 20
 
     hide screen decision_hud
     mc "I think we're moving too fast. We should start with a controlled pilot in one or two departments at most."
@@ -470,7 +474,7 @@ label scenario3:
 
     boss "That’s why I’m telling this to you."
 
-    boss "So you tell me: what’s the best way we can implement this to avoid any blowback."
+    boss "So you tell me: what’s the best way we can implement this to avoid any blowback?"
 
 label scenario_3_decision:
     $ hover_text = ""
@@ -482,7 +486,7 @@ label scenario_3_decision:
         },
         {
             "text": "Collect employee behavior data and train the hiring system on company culture",
-            "hover": "{i}This creates a highly tailored system based on our company culture, but it raises the risk of employee backlash and data security concerns{/i} (-$50k)",
+            "hover": "{i}This creates a highly tailored system based on our company culture, but it raises the risk of employee backlash and data security concerns{/i} (+$50k)",
             "label": "choice_3b"
         },
         {
@@ -496,9 +500,9 @@ label scenario_3_decision:
     return
 
 label choice_3a:
-    $ update_scores(0, 15, 15, -5, -10)
-    $ company_money -= 100
-    $ boss_satisfaction += 20
+    $ game.update_scores(0, 15, 15, -5, -10)
+    $ game.company_money -= 100
+    $ game.boss_satisfaction += 20
 
     hide screen decision_hud
     "{i}A bit of a dystopian practice, but you wouldn't dare let your boss know that.{/i}"
@@ -512,9 +516,9 @@ label choice_3a:
     jump scenario4
 
 label choice_3b:
-    $ update_scores(-20, 30, 30, -15, -20)
-    $ company_money -= 50
-    $ boss_satisfaction += 25
+    $ game.update_scores(-20, 30, 30, -15, -20)
+    $ game.company_money += 50
+    $ game.boss_satisfaction += 25
 
     hide screen decision_hud
     "{i}A bit of a dystopian practice, but you wouldn't dare let your boss know that.{/i}"
@@ -528,9 +532,9 @@ label choice_3b:
     jump scenario4
 
 label choice_3c:
-    $ update_scores (10, -10, 0, 0, 0)
-    $ company_money -= 20
-    $ boss_satisfaction -= 20
+    $ game.update_scores (10, -10, 0, 0, 0)
+    $ game.company_money -= 20
+    $ game.boss_satisfaction -= 20
 
     hide screen decision_hud
     "{i}You're a bit skeptical about this technology and you let your boss know.{/i}"
@@ -554,9 +558,9 @@ label scenario4:
 
     "The boss plops a printed news article on your desk. The headline is devastating:"
 
-    "{i}[company_name]'s AI hiring software favors candidates based on gender and race{/i}"
+    "{i}[company_info['name']]'s AI hiring software favors candidates based on gender and race{/i}"
 
-    "You feel your face turn white."
+    "You feel your face turn pale."
 
     boss "What’s worse: they’ve got the data to back it up. Our system has been shown to disproportionately favor Asian applicants by 40%% and disfavor Black applicants by 60%%."
 
@@ -588,14 +592,14 @@ label scenario_4_decision:
     return
 
 label choice_4a:
-    $ update_scores(-20, 0, 0, -10, -10)
-    $ company_money += 0
-    $ boss_satisfaction += 10
+    $ game.update_scores(-20, 0, 0, -10, -10)
+    $ game.company_money += 0
+    $ game.boss_satisfaction += 10
 
     hide screen decision_hud
     "{i}You encourage the boss to double down on the decision."
     mc "The company will look weak and guilty if we back down now. We have to double down."
-    mc "Say that our company values performance over all, and that AI is the future of a fair and lateral hiring process."
+    mc "Say that our company values performance over all, and that AI is the future of a fair and non-discriminatory hiring process."
     "{i}Your boss nods. He seems to agree.{/i}"
     "{i}He rushes to give instructions to the rest of the staff.{/i}"
 
@@ -603,9 +607,9 @@ label choice_4a:
     jump scenario5
 
 label choice_4b:
-    $ update_scores(20, -20, -10, 10, 10)
-    $ company_money -= 150
-    $ boss_satisfaction += 10
+    $ game.update_scores(20, -20, -10, 10, 10)
+    $ game.company_money -= 150
+    $ game.boss_satisfaction += 10
 
     hide screen decision_hud
     mc "This seems bad. I think it's a good idea to temporarily disable the AI hiring system and resume human-led hiring."
@@ -618,9 +622,9 @@ label choice_4b:
     jump scenario5
 
 label choice_4c:
-    $ update_scores(0, 0, 0, 5, 5)
-    $ company_money -= 80
-    $ boss_satisfaction -= 20
+    $ game.update_scores(0, 0, 0, 5, 5)
+    $ game.company_money -= 80
+    $ game.boss_satisfaction -= 20
 
     hide screen decision_hud
     mc "It's too expensive to rewrite the AI hiring system, but it also looks bad if we don't acknowledge it."
@@ -640,7 +644,7 @@ label scenario5:
     
     show madison talking at center with moveinright
 
-    pr "Hey! I don’t think we’ve properly met. I’m Madison, I handle PR for [company_name]."
+    pr "Hey! I don’t think we’ve properly met. I’m Madison, I handle PR for [company_info['name']]."
 
     pr "I've been told to inform you that we've got a situation here."
 
@@ -668,12 +672,12 @@ label scenario_5_decision:
         },
         {
             "text": "Create a detailed statement on how AI is used at the company, including details about tools, rules, and criteria",
-            "hover": "{i}Builds trust with the public and sets an example, but may also open the door to questions and conversations the company is not yet ready to handle{/i} (-$0k)",
+            "hover": "{i}Builds trust with the public and sets an example, but may also open the door to questions and conversations the company is not yet ready to handle{/i} (-$50k)",
             "label": "choice_5b"
         },
         {
             "text": "Provide an option for candidates to opt-out of AI screening, but make it discreet",
-            "hover": "{i}May make candidates more comfortable, but could it be seen as an admission that the system is untrustworthy?{/i} (-$50k)",
+            "hover": "{i}May make candidates more comfortable, but could it be seen as an admission that the system is untrustworthy?{/i} (-$20k)",
             "label": "choice_5c"
         }
     ]
@@ -682,24 +686,24 @@ label scenario_5_decision:
     return
 
 label choice_5a:
-    $ update_scores(-10, 0, 0, -5, -15)
-    $ company_money += 0
-    $ boss_satisfaction += 20
+    $ game.update_scores(-10, 0, 0, -5, -15)
+    $ game.company_money += 0
+    $ game.boss_satisfaction += 20
 
     hide screen decision_hud
     "{i}'Go general,' you say almost instinctively. There will be critics, but this will quell the immediate criticisms of the public.{/i}"
     "{i}[pr] looks almost shocked. She gives you a look that kind of says: 'Wow. You're a natural.'{/i}"
     "{i}The conversation was short but productive.{/i}"
     "{i}A few weeks later, the public outcry about the company becomes quiet.{/i}"
-    "{i}Is [company_name] finally in the clear?{/i}"
+    "{i}Is [company_info['name']] finally in the clear?{/i}"
 
     hide madison with moveoutleft
     jump scenario6
 
 label choice_5b:
-    $ update_scores(15, 0, 0, 15, 5)
-    $ company_money += 0
-    $ boss_satisfaction += 0
+    $ game.update_scores(15, 0, 0, 15, 5)
+    $ game.company_money -= 50
+    $ game.boss_satisfaction += 0
 
     hide screen decision_hud
     mc "We should take the transparent route."
@@ -712,9 +716,9 @@ label choice_5b:
     jump scenario6
 
 label choice_5c:
-    $ update_scores(-10, 0, 0, -10, -10)
-    $ company_money -= 50
-    $ boss_satisfaction -= 20
+    $ game.update_scores(-10, 0, 0, -10, -10)
+    $ game.company_money -= 20
+    $ game.boss_satisfaction -= 20
 
     hide screen decision_hud
     "{i}'We can't be held liable if it was the candidate's choice,' you think. That's probably the easiest way to get out of this.{/i}"
@@ -735,7 +739,7 @@ label scenario6:
 
     show boss neutral at bobble
 
-    boss "The public outcry against [company_name] has quietened. I'd say it's time for us to take our AI hiring system international."
+    boss "The public outcry against [company_info['name']] has quietened. I'd say it's time for us to take our AI hiring system international."
 
     show boss neutral at bobble
 
@@ -767,9 +771,9 @@ label scenario_6_decision:
     return
 
 label choice_6a:
-    $ update_scores(0, 30, 30, -30, -20)
-    $ company_money += 0
-    $ boss_satisfaction += 30
+    $ game.update_scores(0, 30, 30, -30, -20)
+    $ game.company_money += 0
+    $ game.boss_satisfaction += 30
 
     hide screen decision_hud
     mc "Let's just go for it. We can figure it out as we go."
@@ -783,9 +787,9 @@ label choice_6a:
     jump ending_scene
 
 label choice_6b:
-    $ update_scores(0, 20, 10, 20, 20)
-    $ company_money += 0
-    $ boss_satisfaction += 10
+    $ game.update_scores(0, 20, 10, 20, 20)
+    $ game.company_money += 0
+    $ game.boss_satisfaction += 10
 
     hide screen decision_hud
     mc "Okay well, why don't we take a careful approach? We should assign the legal team to do research on local laws and cultures before wildly implementing the tech."
@@ -800,9 +804,9 @@ label choice_6b:
     jump ending_scene
 
 label choice_6c:
-    $ update_scores(0, 20, 20, 10, 0)
-    $ company_money -= 150
-    $ boss_satisfaction -= 40
+    $ game.update_scores(0, 20, 20, 10, 0)
+    $ game.company_money -= 150
+    $ game.boss_satisfaction -= 40
 
     hide screen decision_hud
     "{i}You think about your boss' proposal. You notice and subsequently point out some of the flaws.{/i}"
@@ -819,33 +823,35 @@ label choice_6c:
 
 # ---------- ENDING -----------------
 label ending_scene:
+    # Ending 1, 2, 3, 4 etc - cross reference company reputation with internal performance metrics - your first performance report?
+
     # COMPANY STATUS.
-    if company_money > 100:
-        "Good Ending"
-        "{i}[company_name] remains afloat after 5 years and seems to be in a better position. It attempts to use AI responsibly and is a leader in its space.{/i}"
-    elif company_money > 0:
+    if game.company_money >= 100:
+        "Ending 1"
+        "{i}[company_info['name']] remains afloat after 5 years and seems to be in a better position. It attempts to use AI responsibly and is a leader in its space.{/i}"
+    elif game.company_money >= 0:
         "Neutral Ending"
-        "{i}[company_name] struggles through the next five years but barely manages to stay afloat.{/i}"
+        "{i}[company_info['name']] struggles through the next five years but barely manages to stay afloat.{/i}"
         "{i}Its fate hangs in the balance as customers seem to be just accepting of their practices.{/i}"
     else:
         "Bad Ending"
-        "{i}After just one year, [company_name] goes bankrupt and fails to win back the trust of the people.{/i}"
+        "{i}After just one year, [company_info['name']] goes bankrupt and fails to win back the trust of the people.{/i}"
         "{i}Customers and employees grow increasingly wary and slowly begin to abandon the company.{/i}"
     
     # REPUTATION.
-    if boss_satisfaction < 25:
-        "Your reputation at [company_name] is poor."
+    if game.boss_satisfaction <= 25:
+        "Your reputation at [company_info['name']] is poor."
         "You have few friends in the company, and people seem to avoid you."
         "Coworkers say that you make their jobs more difficult."
         "Over time, your boss stops approaching you for advice, and eventually, you are laid off."
-    elif boss_satisfaction > 80:
-        "You have an excellent reputation at [company_name]."
+    elif game.boss_satisfaction >= 80:
+        "You have an excellent reputation at [company_info['name']]."
         "You have made good acquaintances at the company, and coworkers frequently consult you for advice."
         "Whether you give good advice or not, we're unsure."
         "When your contract expires, the company re-hires you with a small bonus."
-        "You retire comfortably after working at [company_name] for ten years."
+        "You retire comfortably after working at [company_info['name']] for ten years."
     else:
-        "You are a respected employee at [company_name]."
+        "You are a respected employee at [company_info['name']]."
         "Coworkers approach you for small talk, and you are on friendly terms with most of upper management."
         "You are respected by your associates, and the company keeps you on year after year."
         "Your continued employment seems to be tied with the company's trajectory."
@@ -855,33 +861,13 @@ label ending_scene:
         "Only time will tell."
     
     # Scores.
+    $ ending_scores = game.evaluate_ending()
     "Company Scores"
-    "{b}PEOPLE{/b} (Did you treat customers and employees well?): [evaluate_score(company_stats[0])]"
-    "{b}PROCESS{/b} (How efficient are your processes? Did you help the company save time and money?): [evaluate_score(company_stats[1])]"
-    "{b}TECH{/b} (Did you leverage new technology? Are you ahead or behind competitors?): [evaluate_score(company_stats[2])]"
-    "{b}POLICY{/b} (Is the company compliant with local and global technology laws?): [evaluate_score(company_stats[3])]"
-    "{b}IMPACT{/b} (How positively does your company affect people and society?): [evaluate_score(company_stats[4])]"
+    "{b}PEOPLE{/b} (Did you treat customers and employees well?): [ending_scores[0]]"
+    "{b}PROCESS{/b} (How efficient are your processes? Did you help the company save time and money?): [ending_scores[1]]"
+    "{b}TECH{/b} (Did you leverage new technology? Are you ahead or behind competitors?): [ending_scores[2]]"
+    "{b}POLICY{/b} (Is the company compliant with local and global technology laws?): [ending_scores[3]]"
+    "{b}IMPACT{/b} (How positively does your company affect people and society?): [ending_scores[4]]"
 
     "The End" 
     return
-
-# HELPER FUNCTION.
-init python:
-    def update_scores(people_update, process_update, tech_update, policy_update, impact_update):
-        global company_stats
-        company_stats[0] += people_update
-        company_stats[1] += process_update
-        company_stats[2] += tech_update
-        company_stats[3] += policy_update
-        company_stats[4] += impact_update
-        return
-
-    def evaluate_score(score):
-        if score <= 30:
-            return "Poor"
-        elif score <= 60:
-            return "Fair"
-        elif score <= 80:
-            return "Good"
-        else:
-            return "Excellent"
