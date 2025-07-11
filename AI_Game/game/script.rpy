@@ -110,14 +110,14 @@ label exposition:
     "That's where you come in."
 
     hide fintek with dissolve
-    show silhouette with dissolve
+    show you with dissolve
     # fix timing
 
     "You are a tech consultant from {color=#00a14b}TechRight{/color} hired to overhaul the company’s competitive strategy."
 
     "You’re relatively new, but you think you have what it takes to turn this company around."
 
-    hide silhouette with dissolve
+    hide you with dissolve
     show business card
 
     "That’s what it says on your business card anyway."
