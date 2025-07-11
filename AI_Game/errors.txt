@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 114: end of line expected.
-    show silhouette.PNG with dissolve
-                   ^
+File "game/screens.rpy", line 634: Line is indented, but the preceding spacing statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    $ slot = i + 1
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Jul 11 04:28:45 2025
+Fri Jul 11 14:57:45 2025

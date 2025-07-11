@@ -1,19 +1,59 @@
-2025-07-11 19:22:37 UTC
-macOS-10.16-x86_64-i386-64bit
+2025-07-11 20:51:04 UTC
+macOS-15.4.1-arm64-arm-64bit
 Ren'Py 8.3.7.25031702
 
-Early init took 0.07s
-Loading error handling took 0.05s
-Loading script took 0.37s
-Loading save slot metadata took 0.04s
+Early init took 0.04s
+Loading error handling took 0.11s
+Loading script took 0.32s
+Loading save slot metadata took 0.06s
 Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.02s
+Running init code took 0.16s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
-Backing up script files to '/Users/rhythm0708/Library/RenPy/backups/AI_Game':
-Dump and make backups took 0.06s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.55s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 76.52s
+Loading error handling took 0.12s
+Loading script took 0.24s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.04s
@@ -25,62 +65,3121 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.07s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.01s
 Running _start took 0.00s
-Interface start took 0.94s
+Interface start took 0.23s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 645'
-Version: b'2.1 INTEL-23.0.21'
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 847) drawable=(2880, 1694)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 847) drawable=(2880, 1694)
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
 Maximum texture size: 4096x4096
 Resetting cache.
-Early init took 153.45s
-Loading error handling took 0.05s
-Loading script took 0.29s
-Loading save slot metadata took 0.04s
+Early init took 95.08s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.02s
+Running init code took 0.02s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
 Index archives took 0.00s
-Dump and make backups took 0.05s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 98.47s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 100.30s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.05s
 DPI scale factor: 1.000000
-Creating interface object took 0.01s
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.00s
 Build styles took 0.00s
-Load screen analysis took 0.03s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 118.78s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 140.28s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 345.96s
+Loading error handling took 0.11s
+Loading script took 0.24s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 379.81s
+Loading error handling took 0.12s
+Loading script took 0.25s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 387.66s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 397.02s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 401.90s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 405.27s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 411.63s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 427.10s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 438.18s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 450.68s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 547.67s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 552.54s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 568.07s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 778.44s
+Loading error handling took 0.11s
+Loading script took 0.25s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2209.86s
+Loading error handling took 0.15s
+Loading script took 0.29s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2216.23s
+Loading error handling took 0.02s
+Loading script took 0.06s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2221.08s
+Loading error handling took 0.01s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2236.55s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2244.44s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2250.80s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2279.80s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2295.23s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2310.74s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2333.69s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2349.13s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2355.63s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 322: vbox expects a non-empty block.
+    if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                                                                                     ^
+DPI scale factor: 1.000000
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2358.81s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2365.21s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2373.05s
+Loading error handling took 0.01s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2383.93s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2429.57s
+Loading error handling took 0.11s
+Loading script took 0.29s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2440.42s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2446.88s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2477.40s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2480.75s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2493.21s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2495.01s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2521.06s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2589.45s
+Loading error handling took 0.12s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.32s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2653.35s
+Loading error handling took 0.11s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.32s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2882, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 1384, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 755, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1457, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1113, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1457, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1974, in render
+    cwidth, cheight = sizeit('c', width, height, 0, 0)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1971, in sizeit
+    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
+  File "render.pyx", line 312, in renpy.display.render.render_for_size
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/viewport.py", line 684, in render
+    rend = renpy.display.render.render(self.children[0], child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 1457, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/text/text.py", line 2627, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/text/text.py", line 776, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/text/text.py", line 348, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample, self.shaper, self.instance, self.axis)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/text/font.py", line 745, in get_font
+    face = load_face(fn, shaper)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/text/font.py", line 673, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'fonts/Inter_2pt-Medium.ttf'.
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+Exception: Could not find font 'fonts/Inter_2pt-Medium.ttf'.
+Resetting cache.
+Early init took 2655.14s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.31s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2775.02s
+Loading error handling took 0.11s
+Loading script took 0.21s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.30s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2779.92s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.31s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2786.37s
+Loading error handling took 0.01s
+Loading script took 0.08s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.33s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(812, 457) drawable=(1624, 914)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(811, 457) drawable=(1622, 914)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3732.29s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3817.38s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3970.30s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3976.72s
+Loading error handling took 0.01s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3989.17s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2748, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2748, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 700, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 589, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 424, in execute
+    frame:
+  File "game/screens.rpy", line 427, in execute
+    hbox:
+  File "game/screens.rpy", line 433, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 471, in execute
+    transclude
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 605, in execute
+    fixed:
+  File "game/screens.rpy", line 624, in execute
+    grid gui.file_slot_cols gui.file_slot_rows:
+  File "game/screens.rpy", line 632, in execute
+    for i in range(gui.file_slot_cols * gui.file_slot_rows):
+  File "game/screens.rpy", line 636, in execute
+    button:
+  File "game/screens.rpy", line 636, in keywords
+    button:
+  File "game/screens.rpy", line 637, in <module>
+    action FileAction(slot)
+NameError: name 'slot' is not defined
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 589, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 424, in execute
+    frame:
+  File "game/screens.rpy", line 427, in execute
+    hbox:
+  File "game/screens.rpy", line 433, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 471, in execute
+    transclude
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 605, in execute
+    fixed:
+  File "game/screens.rpy", line 624, in execute
+    grid gui.file_slot_cols gui.file_slot_rows:
+  File "game/screens.rpy", line 632, in execute
+    for i in range(gui.file_slot_cols * gui.file_slot_rows):
+  File "game/screens.rpy", line 636, in execute
+    button:
+  File "game/screens.rpy", line 636, in keywords
+    button:
+  File "game/screens.rpy", line 637, in <module>
+    action FileAction(slot)
+NameError: name 'slot' is not defined
+Resetting cache.
+Early init took 3992.53s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 634: invalid syntax
+    slot = i + 1x
+                 ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 3998.73s
+Loading error handling took 0.01s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4000.60s
+Loading error handling took 0.01s
+Loading script took 0.10s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 634: Line is indented, but the preceding spacing statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    $ slot = i + 1
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4003.83s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4195.90s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4223.49s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4314.51s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4334.57s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4387.77s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4391.24s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4393.05s
+Loading error handling took 0.01s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4396.49s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.12s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4484.50s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.23s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2218, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2748, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/core.py", line 2748, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 700, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 589, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 424, in execute
+    frame:
+  File "game/screens.rpy", line 427, in execute
+    hbox:
+  File "game/screens.rpy", line 433, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 471, in execute
+    transclude
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 605, in execute
+    fixed:
+  File "game/screens.rpy", line 612, in execute
+    button:
+  File "game/screens.rpy", line 612, in keywords
+    button:
+  File "game/screens.rpy", line 617, in <module>
+    action page_name_value.Toggle()
+NameError: name 'page_name_value' is not defined
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 585, in execute
+    screen save():
+  File "game/screens.rpy", line 589, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 599, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 415, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 424, in execute
+    frame:
+  File "game/screens.rpy", line 427, in execute
+    hbox:
+  File "game/screens.rpy", line 433, in execute
+    frame:
+  File "game/screens.rpy", line 436, in execute
+    if scroll == "viewport":
+  File "game/screens.rpy", line 471, in execute
+    transclude
+  File "game/screens.rpy", line 603, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 605, in execute
+    fixed:
+  File "game/screens.rpy", line 612, in execute
+    button:
+  File "game/screens.rpy", line 612, in keywords
+    button:
+  File "game/screens.rpy", line 617, in <module>
+    action page_name_value.Toggle()
+NameError: name 'page_name_value' is not defined
+Resetting cache.
+Early init took 4487.83s
+Loading error handling took 0.01s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4547.10s
+Loading error handling took 0.11s
+Loading script took 0.26s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to '/Users/ashleyseto/Library/RenPy/backups/AI_Game':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.22s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 4562.50s
+Loading error handling took 0.02s
+Loading script took 0.05s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.66s
+Interface start took 0.27s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
+primary display bounds: (0, 0, 1512, 982)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 645'
-Version: b'2.1 INTEL-23.0.21'
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 847) drawable=(2880, 1694)
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 847) drawable=(2880, 1694)
+Resetting cache.
+Early init took 4564.33s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1512, 982)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Apple'"
+Renderer: b'Apple M3 Pro'
+Version: b'2.1 Metal - 89.4'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(811, 456) drawable=(1622, 912)
 Maximum texture size: 4096x4096

@@ -1,11 +1,23 @@
-﻿# Characters.
+﻿# Style.
+
+style extrabold_name is default
+style extrabold_name:
+    font "fonts/RedditSans-ExtraBold.ttf"
+    size 48
+
+style say_dialogue:
+    font "fonts/Inter_24pt-Medium.ttf"
+    size 36
+
+
+# Characters.
 define mc = Character("You", color="#70C3FF")
-define boss = Character("Boss", color="#b11f1f")
+define boss = Character("Boss", color="#e0452b")
 define hr = Character("Karim", color="#1AD87A")
 define pr = Character("Madison", color="#FFDD1B")
 
 # Key Names.
-default company_name = "{color=#297e89}Fintek{/color}"
+default company_name = "{color=#4ac7d1}Fintek{/color}"
 default crypto_coin = "{color=#FFDD1B}CorgiCoin{/color}"
 
 # Company Stats - [0-People, 1-Process, 2-Tech, 3-Policy, 4-Impact].
@@ -73,7 +85,7 @@ screen decision_hud(options):
         yalign 0.65
         background None
         has fixed
-        text hover_text size 24 color "#CCCCCC" text_align 0.5 italic True 
+        text hover_text size 36 color "#DDD" text_align 0.5 italic True 
 
 # Transforms.
 transform bobble:
@@ -117,7 +129,7 @@ label exposition:
 
     "You’re relatively new, but you think you have what it takes to turn this company around."
 
-    hide you with dissolve
+    hide you
     show business card
 
     "That’s what it says on your business card anyway."
@@ -133,26 +145,39 @@ label exposition:
 label scenario0:
 
     # elevator scene start
+    show elevator floor1 with dissolve
 
     "{i}It's your first day on the job.{/i}"
 
+    show elevator floor3
+
     "{i}Your palms are sweaty, but you're confident you can save this company...probably.{/i}"
 
+    show elevator floor6
+
     mc "Geez, this elevator is taking forever."
+    
+    show elevator floor8
 
     "{i}You can feel your heart racing as the floor grows nearer. Just how will things turn out from each decision you make?{/i}"
 
+    show elevator doorsopen
+
     "{i}Suddenly, the doors open to reveal a hairy, stout man in an ill-fitted suit. His eyes crinkle up at the sight of you.{/i}"
 
-    show boss smile at center with moveinbottom 
+    show boss smile at center 
 
     boss "Ah, you're here! I'm glad you could make it today. Please come in!"
 
     "{i}You awkwardly shuffle past him at the elevator doors. This is a welcome surprise.{/i}"
 
+    #change to company scene
+
     mc "Hi there. Is this Fintek?"
 
     boss "Yes, yes, welcome! Let me take you to your office."
+
+    #hallway bg
 
     "{i}He leads you down the short hallway until your reach a door near the opposite end.{/i}"
 
@@ -202,9 +227,9 @@ label scenario0:
 
     show screen money_hud with dissolve
 
-    boss "Sadly that is all we can afford right now so I hope you spend it wisely."
+    boss "Sadly that is all we can afford right now so I hope you can spend it wisely."
 
-    "{color=#b11f1f}{i}NOTE: Conserve your money! If you run low on money by the end of the simulation, the company will go out of business. Make decisions carefully!{/color}{/i}"
+    "{color=#ed5840}{i}NOTE: Conserve your money! If you run low on money, the company will go out of business. Make decisions carefully!{/color}{/i}"
 
     boss "Anyway, I'll let you get settled in for now. If you need me, I'll be in my office next door."
 

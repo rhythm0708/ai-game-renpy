@@ -249,13 +249,14 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("History") action ShowMenu('history')
+            # textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Load") action ShowMenu('load')
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Load") action QuickLoad()
+            textbutton _("Settings") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -306,7 +307,7 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Settings") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -316,18 +317,17 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            # textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("Quit Game") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -472,7 +472,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     use navigation
 
-    textbutton _("Return"):
+    textbutton _("Return to Game"):
         style "return_button"
 
         action Return()
@@ -598,7 +598,7 @@ screen load():
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("My Saves"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
     use game_menu(title):
 
@@ -649,42 +649,42 @@ screen file_slots(title):
                         key "save_delete" action FileDelete(slot)
 
             ## Buttons to access other pages.
-            vbox:
-                style_prefix "page"
+            # vbox:
+            #     style_prefix "page"
 
-                xalign 0.5
-                yalign 1.0
+            #     xalign 0.5
+            #     yalign 1.0
 
-                hbox:
-                    xalign 0.5
+            #     hbox:
+            #         xalign 0.5
 
-                    spacing gui.page_spacing
+            #         spacing gui.page_spacing
 
-                    textbutton _("<") action FilePagePrevious()
-                    key "save_page_prev" action FilePagePrevious()
+                    # textbutton _("<") action FilePagePrevious()
+                    # key "save_page_prev" action FilePagePrevious()
 
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
+                    # if config.has_autosave:
+                    #     textbutton _("{#auto_page}A") action FilePage("auto")
 
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
+                    # if config.has_quicksave:
+                    #     textbutton _("{#quick_page}Q") action FilePage("quick")
 
                     ## range(1, 10) gives the numbers from 1 to 9.
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
+                    # for page in range(1, 10):
+                    #     textbutton "[page]" action FilePage(page)
 
-                    textbutton _(">") action FilePageNext()
-                    key "save_page_next" action FilePageNext()
+                    # textbutton _(">") action FilePageNext()
+                    # key "save_page_next" action FilePageNext()
 
-                if config.has_sync:
-                    if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
-                            action UploadSync()
-                            xalign 0.5
-                    else:
-                        textbutton _("Download Sync"):
-                            action DownloadSync()
-                            xalign 0.5
+                # if config.has_sync:
+                #     if CurrentScreenName() == "save":
+                #         textbutton _("Upload Sync"):
+                #             action UploadSync()
+                #             xalign 0.5
+                #     else:
+                #         textbutton _("Download Sync"):
+                #             action DownloadSync()
+                #             xalign 0.5
 
 
 style page_label is gui_label
@@ -730,7 +730,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Settings"), scroll="viewport"):
 
         vbox:
 
@@ -745,12 +745,12 @@ screen preferences():
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                # vbox:
+                #     style_prefix "check"
+                #     label _("Skip")
+                #     textbutton _("Unseen Text") action Preference("skip", "toggle")
+                #     textbutton _("After Choices") action Preference("after choices", "toggle")
+                #     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -767,9 +767,9 @@ screen preferences():
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    # label _("Auto-Forward Time")
 
-                    bar value Preference("auto-forward time")
+                    # bar value Preference("auto-forward time")
 
                 vbox:
 
@@ -790,14 +790,14 @@ screen preferences():
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
 
-                    if config.has_voice:
-                        label _("Voice Volume")
+                    # if config.has_voice:
+                    #     label _("Voice Volume")
 
-                        hbox:
-                            bar value Preference("voice volume")
+                    #     hbox:
+                    #         bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                    #         if config.sample_voice:
+                    #             textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
