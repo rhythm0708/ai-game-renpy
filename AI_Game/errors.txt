@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 201: expected statement.
-    update_scores(-10, 20, 10, 0, -10)
-                                      ^
+The label scenario_5_decision is defined twice, at File "game/script.rpy", line 578:
+label scenario_5_decision:
+and File "game/script.rpy", line 663:
+label scenario_5_decision:
+
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed Jul  9 17:30:50 2025
+Thu Jul 10 22:28:18 2025
