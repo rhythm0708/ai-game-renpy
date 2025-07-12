@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/game_manager.rpy", line 21: invalid syntax
-            $ local_scores = []
-             ^
+File "game/script.rpy", line 382: expected menuitem
+    show karim neutral
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Jul 11 14:42:17 2025
+Sat Jul 12 06:13:30 2025

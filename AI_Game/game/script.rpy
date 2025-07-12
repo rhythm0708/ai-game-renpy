@@ -77,7 +77,7 @@ screen decision_hud(options):
         yalign 0.65
         background None
         has fixed
-        text hover_text size 24 color "#DDD" text_align 0.5 italic True 
+        text hover_text size 30 color "#DDD" text_align 0.5 italic True 
 
 # Transforms.
 transform bobble:
@@ -121,7 +121,7 @@ label exposition:
 
     "You’re relatively new, but you think you have what it takes to turn this company around."
 
-    hide you with dissolve
+    hide you
     show business card
 
     "That’s what it says on your business card anyway."
@@ -137,18 +137,27 @@ label exposition:
 label scenario0:
 
     # elevator scene start
+    show elevator floor1 with dissolve
 
     "{i}It's your first day on the job.{/i}"
 
-    "{i}Your palms are sweaty, but you're confident you can save this company...probably.{/i}"
+    show elevator floor3
+
+    "{i}Your palms are clammy, but you're confident you can save this company...probably.{/i}"
+
+    show elevator floor6
 
     mc "Geez, this elevator is taking forever."
+    
+    show elevator floor8
 
     "{i}You can feel your heart racing as the floor grows nearer. Just how will things turn out from each decision you make?{/i}"
 
+    show elevator doorsopen
+
     "{i}Suddenly, the doors open to reveal a hairy, stout man in an ill-fitted suit. His eyes crinkle up at the sight of you.{/i}"
 
-    show boss smile at center with moveinbottom 
+    show boss smile at center 
 
     boss "Ah, you're here! I'm glad you could make it today. Please come in!"
 
@@ -208,7 +217,7 @@ label scenario0:
 
     boss "Sadly that is all we can afford right now so I hope you spend it wisely."
 
-    "{color=#b11f1f}{i}NOTE: Conserve your money! If you run low on money by the end of the simulation, the company will go out of business. Make decisions carefully!{/color}{/i}"
+    "{color=#e0452b}{i}NOTE: Conserve your money! If you run low on money, the company will go out of business. Make decisions carefully!{/color}{/i}"
 
     boss "Anyway, I'll let you get settled in for now. If you need me, I'll be in my office next door."
 
@@ -220,7 +229,13 @@ label scenario0:
 label scenario1:
     scene office with fade
 
-    "{i}You’re sitting at your desk in front of a mass of spreadsheets when your boss approaches you with a laptop in hand.{/i}"
+    "{i}A couple hours passed of settling in. Outside your office door was radio silence. Were there even other employees?{/i}"
+
+    "{i}'What am I supposed to be doing right now?' you think to yourself.{/i}"
+
+    "{i}In an instant, as if he heard your thoughts himself, the boss knocks on your door and approaches with a laptop in hand.{/i}"
+
+    # "{i}You’re sitting at your desk in front of a mass of spreadsheets when your boss approaches you with a laptop in hand.{/i}"
     # change this depending on scene
 
     show boss neutral at center with moveinright 
@@ -283,6 +298,7 @@ label choice_1a:
     "{i}You encourage the boss to immediately deploy the AI tool and fix problems as they come up.{/i}"
     mc "Don't let your company fall behind your competitors."
     "{i}Your boss nods. He leaves to give instructions to the rest of the staff.{/i}"
+    # maybe add more to this? 
 
     hide boss with moveoutleft
     jump scenario2
@@ -318,16 +334,30 @@ label choice_1c:
 
 label scenario2:
     scene office with fade
+    
+    "{i}The early morning fatigue is already getting to you.{/i}"
 
-    "{i}You’re sitting at your desk when a man walks up to you. His reflective glasses momentarily blind you.{/i}"
+    mc "I need a coffee."
+
+    "{i}You fumble your way outside to what you think is the coffee station. The room is so barren, it's unclear.{/i}"
+
+    "{i}Ahhhhhhh. Nothing like a good coffee first thing in the morning.{/i}"
+
+    # maybe like a meaningless coffee choice here or smth
+
+    hr "Hi there. Are you new?"
+
+    "{i}You look over to see a tall curly-haired man. His reflective glasses momentarily blind you.{/i}"
 
     show karim neutral at center with moveinright 
 
-    hr "Hey! I’m Karim from HR."
+    hr "Hey, I’m Karim from HR."
+
+    show karim talking
 
     hr "I’ve been working at [company_info['name']] since 2015. I've heard some good things about you from the boss. Thanks for helping out."
 
-    show karim talking
+    show karim neutral at center
 
     hr "So why was I here again? … Oh yeah!"
 
@@ -337,11 +367,17 @@ label scenario2:
 
     hr "The resumé-screening system hasn’t raised any flags so far, so we were thinking of setting up an AI system for interviewing."
 
+    show karim neutral at center
+
     hr "Have you heard of one-way interviews?"
+
+    show karim talking
 
     hr "It’s this new system where candidates can get interviewed by a program that records their responses to pre-set questions."
 
     hr "No interviewer, just… a camera, a timer, and a script."
+
+    show karim neutral at center
 
     menu:
         hr "What do you think about it?"
@@ -349,10 +385,12 @@ label scenario2:
         "Sounds dystopian.":
             mc "I can't lie, that sounds pretty dystopian."
             mc "It strips away so much of the human element in hiring."
+            show karim talking
             hr "That's exactly the concern. But executives love the efficiency."
         "Pretty cool I must say.":
             mc "It's definitely innovative. It would save so many hours coordinating and conducting interviews."
             mc "Plus, candidates can record responses in their own time."
+            show karim talking
             hr "Right? HR loves the flexibility. But not everyone is a fan."
     
     hr "Anyways, we've been offered a software package by a high-level vendor that does just this."
@@ -362,6 +400,7 @@ label scenario2:
     hr "But I wanted to consult with you before we moved forward with the decision."
 
     hr "So, any advice? What should we tell the vendor?"
+    show karim neutral
 
 label scenario_2_decision:
     $ hover_text = ""
@@ -408,7 +447,9 @@ label choice_2b:
     hide screen decision_hud
     mc "It's always a good idea to perform checks with these types of things."
     mc "Overpromise, underdeliver. And the customers will always blame us. It's best if we do our due diligence."
+    show karim talking
     hr "Won't that be expensive? But I suppose you're right. Let's do it your way then."
+    show karim neutral
     "{i}You and [hr] part ways with some sense of mutual agreement.{/i}"
 
     hide karim with moveoutleft
