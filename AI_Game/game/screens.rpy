@@ -287,47 +287,51 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
+    if main_menu:
 
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        if main_menu:
+        # HORIZONTAL layout for Main Menu
+        hbox:
+            style_prefix "navigation"
+            spacing 180
+            xalign 0.5
+            yalign 0.95  # Bottom center
 
             textbutton _("Start") action Start()
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Settings") action ShowMenu("preferences")
 
-        else:
+            textbutton _("Quit Game") action Quit(confirm=True)
+
+    else:
+
+        # VERTICAL layout for in-game pause menu
+        vbox:
+            style_prefix "navigation"
+            spacing 10
+            xpos gui.navigation_xpos
+            yalign 0.5
 
             textbutton _("History") action ShowMenu("history")
-
             textbutton _("Save") action ShowMenu("save")
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Settings") action ShowMenu("preferences")
 
-        textbutton _("Load") action ShowMenu("load")
+            # textbutton _("About") action ShowMenu("about")
 
-        textbutton _("Settings") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-        # textbutton _("About") action ShowMenu("about")
-
-        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             # textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+            if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True)
+            else:
+                textbutton _("Exit to Main Menu") action MainMenu(confirm=True)
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit Game") action Quit(confirm=not main_menu)
+            if renpy.variant("pc"):
+                textbutton _("Quit Game") action Quit(confirm=True)
+
+
+
 
 
 style navigation_button is gui_button
@@ -352,7 +356,13 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+
+    add "gui/main_menu.png"
+
+    add "gui/overlay/menu_test.png":
+        xalign 0.5
+        ysize 1.0  
+        yalign 1.0
 
     ## This empty frame darkens the main menu.
     frame:
@@ -381,10 +391,11 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
-    yfill True
+    xfill True
+    ysize 180         
+    yalign 1.0       
 
-    background "gui/overlay/main_menu.png"
+    background "gui/overlay/menu_test.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -726,85 +737,74 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+
+
+
+
+
 screen preferences():
-
     tag menu
-
     use game_menu(_("Settings"), scroll="viewport"):
-
         vbox:
+            use preferences_content()
+    # else:
+    #     # Main menu layout: use content directly
+    #     frame:
+    #         style_prefix "pref"
 
-            hbox:
-                box_wrap True
+    #         vbox:
+    #             xalign 0.5
+    #             yalign 0.1
+    #             spacing 30
+    #             text _("Settings") style "menu_title_text"
+    #             use preferences_content()
 
-                if renpy.variant("pc") or renpy.variant("web"):
+screen preferences_content():
+    vbox:
 
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+        hbox:
+            box_wrap True
 
-                # vbox:
-                #     style_prefix "check"
-                #     label _("Skip")
-                #     textbutton _("Unseen Text") action Preference("skip", "toggle")
-                #     textbutton _("After Choices") action Preference("after choices", "toggle")
-                #     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
-
-            null height (4 * gui.pref_spacing)
-
-            hbox:
-                style_prefix "slider"
-                box_wrap True
+            if renpy.variant("pc") or renpy.variant("web"):
 
                 vbox:
+                    style_prefix "radio"
+                    label _("Display")
+                    textbutton _("Window") action Preference("display", "window")
+                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-                    label _("Text Speed")
+        null height (4 * gui.pref_spacing)
 
-                    bar value Preference("text speed")
+        hbox:
+            style_prefix "slider"
+            box_wrap True
 
-                    # label _("Auto-Forward Time")
+            vbox:
 
-                    # bar value Preference("auto-forward time")
+                label _("Text Speed")
+                bar value Preference("text speed")
 
-                vbox:
+            vbox:
 
-                    if config.has_music:
-                        label _("Music Volume")
+                if config.has_music:
+                    label _("Music Volume")
+                    hbox:
+                        bar value Preference("music volume")
 
-                        hbox:
-                            bar value Preference("music volume")
+                if config.has_sound:
+                    label _("Sound Volume")
+                    hbox:
+                        bar value Preference("sound volume")
 
-                    if config.has_sound:
+                        if config.sample_sound:
+                            textbutton _("Test") action Play("sound", config.sample_sound)
 
-                        label _("Sound Volume")
+                if config.has_music or config.has_sound or config.has_voice:
+                    null height gui.pref_spacing
 
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
-
-
-                    # if config.has_voice:
-                    #     label _("Voice Volume")
-
-                    #     hbox:
-                    #         bar value Preference("voice volume")
-
-                    #         if config.sample_voice:
-                    #             textbutton _("Test") action Play("voice", config.sample_voice)
-
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-
-                        textbutton _("Mute All"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                    textbutton _("Mute All"):
+                        action Preference("all mute", "toggle")
+                        style "mute_all_button"
 
 
 style pref_label is gui_label
@@ -1548,11 +1548,11 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+    background "gui/game/overlay/menu_test.png"
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
+    background "gui/game/overlay/menu_test.png"
 
 style game_menu_navigation_frame:
     variant "small"

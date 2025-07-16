@@ -449,7 +449,7 @@ label choice_2b:
     mc "Overpromise, underdeliver. And the customers will always blame us. It's best if we do our due diligence."
     show karim talking
     hr "Won't that be expensive? But I suppose you're right. Let's do it your way then."
-    show karim neutral
+    show karim
     "{i}You and [hr] part ways with some sense of mutual agreement.{/i}"
 
     hide karim with moveoutleft

@@ -1,41 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 110, in script
-    "After a bad investment in [company_name['crypto']], customers started losing trust and sales have been declining year-over-year."
-NameError: name 'company_name' is not defined
+Exception: Screen menu_load is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 110, in script
-    "After a bad investment in [company_name['crypto']], customers started losing trust and sales have been declining year-over-year."
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2586, in execute
-    Say.execute(self)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/exports/sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/character.py", line 1456, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/character.py", line 1369, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/character.py", line 1349, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/substitutions.py", line 373, in substitute
-    s = interpolate(s, variables) # type: ignore
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/substitutions.py", line 86, in interpolate
-    raise e
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/substitutions.py", line 78, in interpolate
-    value = renpy.python.py_eval(code, {}, scope)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/python.py", line 1218, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/python.py", line 1211, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'company_name' is not defined
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ast.py", line 834, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/python.py", line 1187, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 33, in _execute_python_hide
+    renpy.show_screen(name, *args, **kwargs)
+  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 1328, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen menu_load is not known.
 
-macOS-10.16-x86_64-i386-64bit x86_64
+
+macOS-15.4.1-arm64-arm-64bit arm64
 Ren'Py 8.3.7.25031702
 AI Hiring Edition 1.0
-Fri Jul 11 14:59:10 2025
+Tue Jul 15 22:52:14 2025
