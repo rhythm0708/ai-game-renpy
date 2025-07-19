@@ -1,28 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-Exception: Screen menu_load is not known.
-
+After initialization, but before game start.
+  File "game/screens.rpy", line 391, in prepare_screen
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 391, in prepare
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+Exception: A screen named navigation does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/ast.py", line 834, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/python.py", line 1187, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 33, in _execute_python_hide
-    renpy.show_screen(name, *args, **kwargs)
-  File "/Volumes/renpy-8.3.7-sdk/renpy-8.3.7-sdk/renpy/display/screen.py", line 1328, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen menu_load is not known.
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/main.py", line 652, in main
+    run(restart)
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/display/screen.py", line 1027, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 391, in prepare_screen
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 391, in prepare
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "/Users/rhythm0708/Desktop/renpy-8.3.7-sdk/renpy/sl2/slast.py", line 2030, in prepare
+    raise Exception("A screen named {} does not exist.".format(self.target))
+Exception: A screen named navigation does not exist.
 
-
-macOS-15.4.1-arm64-arm-64bit arm64
+macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.3.7.25031702
 AI Hiring Edition 1.0
-Tue Jul 15 22:52:14 2025
+Sat Jul 19 00:49:59 2025

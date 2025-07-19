@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 428: end of line expected.
-    label choice_2a:``
-                    ^
+File "game/screens.rpy", line 323: frame expects a non-empty block.
+    if main_menu:
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Wed Jul 16 03:41:42 2025
+Sat Jul 19 00:49:30 2025

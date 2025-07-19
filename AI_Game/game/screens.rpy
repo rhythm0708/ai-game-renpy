@@ -285,55 +285,6 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-screen navigation():
-
-    if main_menu:
-
-        # HORIZONTAL layout for Main Menu
-        hbox:
-            style_prefix "navigation"
-            spacing 180
-            xalign 0.5
-            yalign 0.95  # Bottom center
-
-            textbutton _("Start") action Start()
-            textbutton _("Load") action ShowMenu("load")
-            textbutton _("Settings") action ShowMenu("preferences")
-
-            textbutton _("Quit Game") action Quit(confirm=True)
-
-    else:
-
-        # VERTICAL layout for in-game pause menu
-        vbox:
-            style_prefix "navigation"
-            spacing 10
-            xpos gui.navigation_xpos
-            yalign 0.5
-
-            textbutton _("History") action ShowMenu("history")
-            textbutton _("Save") action ShowMenu("save")
-            textbutton _("Load") action ShowMenu("load")
-            textbutton _("Settings") action ShowMenu("preferences")
-
-            # textbutton _("About") action ShowMenu("about")
-
-            # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            # textbutton _("Help") action ShowMenu("help")
-
-            if _in_replay:
-                textbutton _("End Replay") action EndReplay(confirm=True)
-            else:
-                textbutton _("Exit to Main Menu") action MainMenu(confirm=True)
-
-            if renpy.variant("pc"):
-                textbutton _("Quit Game") action Quit(confirm=True)
-
-
-
-
-
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
@@ -368,9 +319,23 @@ screen main_menu():
     frame:
         style "main_menu_frame"
 
+        # NAV.
+        # HORIZONTAL layout for Main Menu
+        hbox:
+            style_prefix "navigation"
+            spacing 180
+            xalign 0.5
+            yalign 0.95  # Bottom center
+
+            textbutton _("Start") action Start()
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Settings") action ShowMenu("preferences")
+
+            textbutton _("Quit Game") action Quit(confirm=True)
+
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    
 
     if gui.show_name:
 
@@ -481,7 +446,31 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    # VERTICAL layout for in-game pause menu
+        vbox:
+            style_prefix "navigation"
+            spacing 10
+            xpos gui.navigation_xpos
+            yalign 0.5
+
+            textbutton _("History") action ShowMenu("history")
+            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Settings") action ShowMenu("preferences")
+
+            # textbutton _("About") action ShowMenu("about")
+
+            # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            # textbutton _("Help") action ShowMenu("help")
+
+            if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True)
+            else:
+                textbutton _("Exit to Main Menu") action MainMenu(confirm=True)
+
+            if renpy.variant("pc"):
+                textbutton _("Quit Game") action Quit(confirm=True)
 
     textbutton _("Return to Game"):
         style "return_button"
@@ -737,11 +726,6 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-
-
-
-
-
 screen preferences():
     tag menu
     use game_menu(_("Settings"), scroll="viewport"):
@@ -780,12 +764,10 @@ screen preferences_content():
             box_wrap True
 
             vbox:
-
                 label _("Text Speed")
                 bar value Preference("text speed")
 
             vbox:
-
                 if config.has_music:
                     label _("Music Volume")
                     hbox:
@@ -1609,3 +1591,69 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+################################################################################
+## Custom Screens
+################################################################################
+
+# Money HUD.
+screen money_hud():
+    tag overlay
+    zorder 10
+
+    frame:
+        xalign 1.0
+        yalign 0.0
+        padding (20, 10)
+        background "#0008"
+
+        hbox:
+            spacing 10
+            image "images/UI/icon money.png" zoom 0.05
+            text "Budget: $ [game.company_money]k" size 24 color "#fff"
+
+# Decision HUD.
+default hover_text = ""
+
+screen decision_hud(options):
+    modal True
+
+    frame:
+        background "#303030b2"
+        xfill True
+        yfill True
+        xalign 0.5
+        yalign 0.3
+        padding (40, 30)
+        has vbox:
+            spacing 25
+            xalign 0.5
+            yalign 0.3
+
+        vbox:
+            spacing 15
+            xalign 0.5
+            yalign 0.2
+
+            for option in options:
+                textbutton option["text"]:
+                    text_color "#333"
+                    background "#CCCCCC"
+                    padding (25, 20)
+                    xsize 900
+                    hover_background "#AAAAAACC"
+                    action Jump(option["label"])
+                    hovered SetScreenVariable("hover_text", option["hover"])
+                    unhovered SetScreenVariable("hover_text", "")
+                null height 10
+
+        null height 20
+
+    frame:
+        xalign 0.5
+        xsize 900
+        ysize 48
+        yalign 0.65
+        background None
+        has fixed
+        text hover_text size 30 color "#DDD" text_align 0.5 italic True 

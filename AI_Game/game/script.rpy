@@ -17,68 +17,6 @@ default company_info = {
 # Game Manager.
 default game = GameManager()
 
-# Money HUD.
-screen money_hud():
-    tag overlay
-    zorder 10
-
-    frame:
-        xalign 1.0
-        yalign 0.0
-        padding (20, 10)
-        background "#0008"
-
-        hbox:
-            spacing 10
-            image "images/UI/icon money.png" zoom 0.05
-            text "Budget: $ [game.company_money]k" size 24 color "#fff"
-
-# Decision HUD.
-default hover_text = ""
-
-screen decision_hud(options):
-    modal True
-
-    frame:
-        background "#303030b2"
-        xfill True
-        yfill True
-        xalign 0.5
-        yalign 0.3
-        padding (40, 30)
-        has vbox:
-            spacing 25
-            xalign 0.5
-            yalign 0.3
-
-        vbox:
-            spacing 15
-            xalign 0.5
-            yalign 0.2
-
-            for option in options:
-                textbutton option["text"]:
-                    text_color "#333"
-                    background "#CCCCCC"
-                    padding (25, 20)
-                    xsize 900
-                    hover_background "#AAAAAACC"
-                    action Jump(option["label"])
-                    hovered SetScreenVariable("hover_text", option["hover"])
-                    unhovered SetScreenVariable("hover_text", "")
-                null height 10
-
-        null height 20
-
-    frame:
-        xalign 0.5
-        xsize 900
-        ysize 48
-        yalign 0.65
-        background None
-        has fixed
-        text hover_text size 30 color "#DDD" text_align 0.5 italic True 
-
 # Transforms.
 transform bobble:
     yoffset 0
@@ -157,7 +95,7 @@ label scenario0:
 
     "{i}Suddenly, the doors open to reveal a hairy, stout man in an ill-fitted suit. His eyes crinkle up at the sight of you.{/i}"
 
-    show boss smile at center 
+    show boss smile at center with dissolve
 
     boss "Ah, you're here! I'm glad you could make it today. Please come in!"
 
